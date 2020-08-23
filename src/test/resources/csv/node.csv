@@ -1,0 +1,4 @@
+id;name;refined.id;mode;uiClasses;tag;tagUiClasses
+service:prov;Provisioning;;LINK;fas fa-server;technical;fa fa-industry
+service:prov:fe;Provisioning Orange FE;service:prov;LINK;;;
+service:prov:fe:test;Provisioning Orange FE;service:prov:fe;LINK;;;
