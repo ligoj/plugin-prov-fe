@@ -51,16 +51,13 @@ import lombok.extern.slf4j.Slf4j;
 
 /**
  * The provisioning price service for Digital Ocean. Manage install or update of prices.<br>
+ * Note about RI: Subscribing to a Reserved Instance is a pricing option and does not guarantee resource availability. If your target flavour is not already in use, it is recommended to check the availability on the Console.
+
+
  * 
- * @see <a href="hhttps://en.fe.com/pricing/">Pricing details</a>
- * @see <a href="hhttps://en.fe.com/pricing/how-pricing-works/">Pricing computation</a>
- * @see <a href="https://wiki.fe.net/display/EN/Getting+the+Price+of+Your+Instances">Reservation</a>
- * @see <a href="https://wiki.fe.net/pages/viewpage.action?pageId=43061335">Locations</a>
- * @see <a href="https://fr.fe.com/support-technique/">Support</a>
- * @see <a href="https://wiki.fe.net/pages/viewpage.action?pageId=43066330">Instance Types</a>
- * @see <a href="https://wiki.fe.net/display/EN/About+Volumes">Volumes</a>
- * @see <a href="https://wiki.fe.net/display/FR/Types+d'instances">Instance types</a>
- * 
+ * @see <a href="https://cloud.orange-business.com/offres/infrastructure-iaas/flexible-engine/assistance-flexible-engine/comprendre-sa-facture">VM Billing</a>
+ * @see <a href="https://cloud.orange-business.com/wp-content/uploads/2020/06/Quote-Flexible-Engine-External.xlsx">Pricing sheet</a>
+ * @see <a href="https://cloud.orange-business.com/nos-tarifs/elastic-cloud-server/">Pricing</a>
  */
 @Component
 @Setter

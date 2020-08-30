@@ -1,3 +1,0 @@
-node.id;name;code;slaStartTime;slaEndTime;slaWeekEnd;commitment;accessApi;accessEmail;accessChat;accessPhone;seats;slaGeneralGuidance;slaSystemImpaired;slaProductionSystemImpaired;slaProductionSystemDown;slaBusinessCriticalSystemDown;level;description
-service:prov:fe;Basic;fe-basic;0;86400000;TRUE;1;;ALL;ALL;ALL;;;;;;;LOW;
-service:prov:fe;Service de contrat Excellence;fe-excellence;0;86400000;TRUE;1;;ALL;ALL;ALL;;;;;;;BEST;https://fr.fe.com/professional-services-services/

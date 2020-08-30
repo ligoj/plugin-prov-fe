@@ -1,0 +1,33 @@
+{
+    "eu-west-0": {
+        "continentM49": 150,
+        "regionM49": 155,
+        "countryA2": "FR",
+        "countryM49": 250,
+        "placement": "central",
+        "subRegion": "Paris",
+        "latitude": 48.8188484,
+        "longitude": 2.1583486,
+        "name": "EUROPE"
+    },
+    "eu-west-1": {
+       "continentM49": 150,
+        "regionM49": 155,
+        "countryM49": 528,
+        "countryA2": "NL",
+        "placement": "east",
+        "subRegion": "Amsterdam",
+        "latitude": 52.3546449,
+        "longitude": 4.8339214
+    },
+    "na-east-0": {
+        "continentM49": 19,
+        "regionM49": 21,
+        "countryA2": "US",
+        "countryM49": 840,
+        "placement": "east",
+        "subRegion": "Atlanta",
+        "latitude": 33.75570800000001,
+        "longitude": -84.388368,
+    }
+}
