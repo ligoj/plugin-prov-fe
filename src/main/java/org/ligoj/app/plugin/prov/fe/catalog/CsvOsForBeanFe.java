@@ -8,24 +8,35 @@ import java.io.IOException;
 import java.io.Reader;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
+import java.util.regex.Pattern;
 
 import org.apache.commons.lang3.StringUtils;
+import org.ligoj.app.plugin.prov.model.VmOs;
 import org.ligoj.bootstrap.core.csv.AbstractCsvManager;
 import org.ligoj.bootstrap.core.csv.CsvBeanReader;
 import org.ligoj.bootstrap.core.csv.CsvReader;
 
+import lombok.extern.slf4j.Slf4j;
+
 /**
  * Read AWS EC2 CSV input, skipping the AWS headers and non instance type rows.
  */
-public class CsvForBeanFe extends AbstractCsvManager {
+@Slf4j
+public class CsvOsForBeanFe extends AbstractCsvManager {
 
-	private final CsvBeanReader<CsvPrice> beanReader;
+	private final CsvBeanReader<CsvOsPrice> beanReader;
 
 	/**
-	 * Convertible mode.
+	 * OS mode.
 	 */
-	private boolean convertible = false;
+	private VmOs os;
+
+	/**
+	 * Software mode.
+	 */
+	private String software;
 
 	/**
 	 * CSV Mapping to Java bean property
@@ -33,21 +44,11 @@ public class CsvForBeanFe extends AbstractCsvManager {
 	protected static final Map<String, String> HEADERS_MAPPING = new HashMap<>();
 	static {
 		HEADERS_MAPPING.put("product", "product");
-		HEADERS_MAPPING.put("cpu", "cpu");
-		HEADERS_MAPPING.put("ram (GB)", "ram");
 		HEADERS_MAPPING.put("cost_h", "cost1h");
 		HEADERS_MAPPING.put("cost_m", "cost1m");
-		HEADERS_MAPPING.put("cost_m_1y_no_upfront", "cost1yPerMonth");
-		HEADERS_MAPPING.put("cost_1y_upfront_fees", "cost1yUFFee");
-		HEADERS_MAPPING.put("cost_m_1y_upfront", "cost1yUFPerMonth");
-		HEADERS_MAPPING.put("cost_2y_upfront_fees", "cost2yUFFee");
-		HEADERS_MAPPING.put("cost_m_2y_upfront", "cost2yUFPerMonth");
-		HEADERS_MAPPING.put("cost_m_3y_no_upfront", "cost3yPerMonth");
-		HEADERS_MAPPING.put("cost_3y_upfront_fees", "cost3yUFFee");
-		HEADERS_MAPPING.put("cost_m_5y_no_upfront", "cost5yPerMonth");
-		HEADERS_MAPPING.put("cost_m_3y_convertible", "cost3yPerMonthConvertible");
-
 	}
+
+	private static final Pattern PATTERN_LICENCE = Pattern.compile("Licence (.*)\\s+\\(.*");
 
 	/**
 	 * Build the reader parsing the CSV file from AWS to build {@link AwsEc2Price} instances. Non AWS instances data are
@@ -56,7 +57,7 @@ public class CsvForBeanFe extends AbstractCsvManager {
 	 * @param reader The original AWS CSV input.
 	 * @throws IOException When CSV content cannot be read.
 	 */
-	public CsvForBeanFe(final BufferedReader reader) throws IOException {
+	public CsvOsForBeanFe(final BufferedReader reader) throws IOException {
 
 		// Complete the standard mappings
 		final var mMapping = new HashMap<>(HEADERS_MAPPING);
@@ -67,14 +68,13 @@ public class CsvForBeanFe extends AbstractCsvManager {
 				csvReader.read().stream().map(v -> mMapping.getOrDefault(v, "drop")).toArray(String[]::new));
 	}
 
-	protected CsvBeanReader<CsvPrice> newCsvReader(final Reader reader, final String[] headers) {
-		return new AbstractFeCsvReader<>(reader, headers, CsvPrice.class) {
+	protected CsvBeanReader<CsvOsPrice> newCsvReader(final Reader reader, final String[] headers) {
+		return new AbstractFeCsvReader<>(reader, headers, CsvOsPrice.class) {
 
 			@Override
 			protected boolean isValidRaw(final List<String> rawValues) {
-				return CsvForBeanFe.this.isValidRaw(rawValues);
+				return CsvOsForBeanFe.this.isValidRaw(rawValues);
 			}
-
 		};
 	}
 
@@ -82,19 +82,37 @@ public class CsvForBeanFe extends AbstractCsvManager {
 		if (!rawValues.isEmpty()) {
 			// Check the convertible switch mode
 			final var col0 = rawValues.get(0);
-			if (StringUtils.containsIgnoreCase(col0, "Flexible Elastic Cloud Serve")) {
-				// Encounter the convertible "ECS" switch
-				convertible = true;
-			} else if (StringUtils.containsIgnoreCase(col0, "ECS - Orange Business Services Compute")) {
-				// Encounter the not convertible "ECS" switch
-				convertible = false;
+			final var matcher = PATTERN_LICENCE.matcher(col0);
+
+			if (matcher.find()) {
+				final var licPart = matcher.group(1).toUpperCase(Locale.ENGLISH);
+				// New block
+				if (licPart.contains("WINDOWS")) {
+					os = VmOs.WINDOWS;
+					software = null;// No supported software for Windows
+				} else if (licPart.contains("REDHAT")) {
+					os = VmOs.RHEL;
+					software = null;// No supported software for RHEL
+				} else if (licPart.contains("SUSE")) {
+					os = VmOs.SUSE;
+					if ((licPart.contains("SAP APPLICATIONS"))) {
+						software = "SAP APPLICATIONS";
+					} else if ((licPart.contains("SAP"))) {
+						software = "SAP";
+					} else {
+						software = null;
+					}
+				} else {
+					log.warn("Unsupported licence model {}", licPart);
+				}
+				return false;
 			}
 			if (StringUtils.equalsIgnoreCase(col0, "Produit")) {
 				// Ignore original CSV headers
 				return false;
 			}
 		}
-		return rawValues.size() > 7;
+		return rawValues.size() >= 7;
 	}
 
 	/**
@@ -103,11 +121,12 @@ public class CsvForBeanFe extends AbstractCsvManager {
 	 * @return The bean read from the next CSV record.
 	 * @throws IOException When the CSV record cannot be read.
 	 */
-	public CsvPrice read() throws IOException {
+	public CsvOsPrice read() throws IOException {
 		final var entry = beanReader.read();
 
-		// Forward the convertible mode to this new CSV entry
-		entry.setConvertible(convertible);
+		// Forward the block data
+		entry.setOs(os);
+		entry.setSoftware(software);
 		return entry;
 	}
 }

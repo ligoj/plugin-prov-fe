@@ -254,14 +254,12 @@ class ProvFePriceImportTest extends AbstractServerTest {
 
 	private void mockServer() throws IOException {
 		configuration.put(FePriceImport.CONF_API_PRICES, "http://localhost:" + MOCK_PORT);
-		httpServer.stubFor(get(urlEqualTo("/prices/fe-prices.csv"))
-				.willReturn(aResponse().withStatus(HttpStatus.SC_OK).withBody(IOUtils.toString(
-						new ClassPathResource("mock-server/fe/fe-prices.csv").getInputStream(), "UTF-8"))));
-		httpServer.stubFor(
-				get(urlEqualTo("/v2/prices/fe-prices.csv")).willReturn(aResponse().withStatus(HttpStatus.SC_OK)
-						.withBody(IOUtils.toString(
-								new ClassPathResource("mock-server/fe/v2/fe-prices.csv").getInputStream(),
-								"UTF-8"))));
+		httpServer.stubFor(get(urlEqualTo("/prices/pricing.csv"))
+				.willReturn(aResponse().withStatus(HttpStatus.SC_OK).withBody(IOUtils
+						.toString(new ClassPathResource("mock-server/fe/pricing.csv").getInputStream(), "UTF-8"))));
+		httpServer.stubFor(get(urlEqualTo("/v2/prices/pricing.csv"))
+				.willReturn(aResponse().withStatus(HttpStatus.SC_OK).withBody(IOUtils
+						.toString(new ClassPathResource("mock-server/fe/v2/pricing.csv").getInputStream(), "UTF-8"))));
 		httpServer.start();
 	}
 

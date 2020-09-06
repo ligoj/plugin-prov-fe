@@ -1,0 +1,25 @@
+name;;;;;;monthlyCost;Region
+Licence OS Bare Metal;Facturé à la granularité au mois;;;;;;
+OS;;;;;;"$/mois en sus des Prix Linux
+[18bis]";
+Oracle Linux;;;;;; -   € ;Paris
+Red Hat Enterprise;;;;;; 86,00 € ;Paris
+Windows Server;;;;;; 60,00 € ;Paris
+SUSE Enterprise;;;;;; 86,00 € ;Paris
+Oracle Linux;;;;;; -   € ;Amsterdam
+Red Hat Enterprise;;;;;; 86,00 € ;Amsterdam
+Windows Server;;;;;; 60,00 € ;Amsterdam
+SUSE Enterprise;;;;;; 86,00 € ;Amsterdam
+Licence OS Bare Metal;Facturé à la granularité au mois;;;;;;
+OS;;;;;;"$/mois en sus des Prix Linux
+[18bis]";
+Oracle Linux;;;;;; $-   ;Altanta
+Red Hat Enterprise;;;;;; $94,00 ;Altanta
+Windows Server;;;;;; $72,00 ;Altanta
+SUSE Enterprise;;;;;; $94,00 ;Altanta
+Licence OS Bare Metal;Billed at the monthlyhour granularity;;;;;;
+Product;;;;;;USD/month on top of Linux prices;
+Oracle Linux;;;;;; $-   ;Singapore
+Red Hat Enterprise;;;;;; $94,00 ;Singapore
+Windows Server;;;;;; $72,00 ;Singapore
+SUSE Enterprise;;;;;; $94,00 ;Singapore

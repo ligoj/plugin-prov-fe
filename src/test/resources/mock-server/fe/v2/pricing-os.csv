@@ -1,0 +1,608 @@
+﻿Licence WINDOWS Server OS image 2008, 2012, 2016  (compute exclus) [17];Facturé à la granularité de l'heure;;[5bis] [18bis];;;
+Produit;;;;;"€/Heure en sus des Prix Linux
+[5][5bis]";"€/mois en sus des Prix Linux
+[18bis]"
+Paris - s3.small.1 (1vCPU, 1GB RAM);;;;;0,0342 €; €25,00 
+Paris - s3.medium.2 (1 vCPU, 2GB RAM);;;;;0,0342 €; €25,00 
+Paris - s3.medium.4 (1 vCPU, 4GB RAM);;;;;0,0342 €; €25,00 
+Paris - s3.large.2 (2 vCPU, 4GB RAM);;;;;0,0684 €; €50,00 
+Paris - s3.xlarge.2 (4 vCPU, 8GB RAM);;;;;0,1369 €; €100,00 
+Paris - s3.2xlarge.2 (8 vCPU, 16GB RAM);;;;;0,2739 €; €200,00 
+Paris - s3.4xlarge.2 (16 vCPU, 32GB RAM);; ;;;0,5479 €; €400,00 
+Paris - s3.8xlarge.2 (32 vCPU, 64GB RAM);;;;;0,9643 €; €704,00 
+Paris - s3.large.4 (2 vCPU, 8GB RAM);;;;;0,0684 €; €50,00 
+Paris - s3.xlarge.4 (4 vCPU, 16GB RAM);;;;;0,1369 €; €100,00 
+Paris - s3.2xlarge.4 (8 vCPU, 32GB RAM);;;;;0,2739 €; €200,00 
+Paris - s3.4xlarge.4 (16 vCPU, 64GB RAM);;;;;0,5479 €; €400,00 
+Paris - s3.8xlarge.4 (32 vCPU, 128GB RAM);;;;;0,9643 €; €704,00 
+Paris - m1.large (2 vCPU, 16GB RAM);;;;;0,0684 €; €50,00 
+Paris - m1.xlarge (4 vCPU, 32GB RAM);;;;;0,1369 €; €100,00 
+Paris - m1.2xlarge (8 vCPU, 64GB RAM);;;;;0,2739 €; €200,00 
+Paris - m1.4xlarge (16 vCPU, 128GB RAM);;;;;0,5479 €; €400,00 
+Paris - m2.large.8 (2 vCPU, 16GB RAM);;;;;0,0684 €; €50,00 
+Paris - m2.xlarge.8 (4 vCPU, 32GB RAM);;;;;0,1369 €; €100,00 
+Paris - m2.2xlarge.8 (8 vCPU, 64GB RAM);;;;;0,2739 €; €200,00 
+Paris - m2.4xlarge.8 (16 vCPU, 128GB RAM);;;;;0,5479 €; €400,00 
+Paris - m2.8xlarge.8 (32 vCPU, 256GB RAM);;;;;0,9643 €; €704,00 
+Paris - m6.large.8 (2 vCPU, 16GB RAM) in roadmap, controlled Availability;;;;;0,0684 €; €50,00 
+Paris - m6.xlarge.8 (4 vCPU, 32GB RAM) in roadmap, controlled Availability;;;;;0,1369 €; €100,00 
+Paris - m6.2xlarge.8 (8 vCPU, 64GB RAM) in roadmap, controlled Availability;;;;;0,2739 €; €200,00 
+Paris - m6.3xlarge.8 (12 vCPU, 96GB RAM) in roadmap, controlled Availability;;;;;0,4108 €; €300,00 
+Paris - m6.4xlarge.8 (16 vCPU, 128GB RAM) in roadmap, controlled Availability;;;;;0,5479 €; €400,00 
+Paris - m6.6xlarge.8 (24 vCPU, 192GB RAM) in roadmap, controlled Availability;;;;;0,6848 €; €600,00 
+Paris - m6.8xlarge.8 (32 vCPU, 256GB RAM) in roadmap, controlled Availability;;;;;0,9643 €; €704,00 
+Paris - m6.16xlarge.8 (64 vCPU, 512GB RAM) in roadmap, controlled Availability;;;;;1,3696 €; €1 200,00 
+Paris - s1.medium (1 vCPU, 4GB RAM);;;;;0,0342 €; €25,00 
+Paris - s1.large (2 vCPU, 8GB RAM);;;;;0,0684 €; €50,00 
+Paris - s1.xlarge (4 vCPU, 16GB RAM);;;;;0,1369 €; €100,00 
+Paris - s1.2xlarge (8 vCPU, 32GB RAM);;;;;0,2739 €; €200,00 
+Paris - s1.4xlarge (16 vCPU, 64GB RAM);;;;;0,5479 €; €400,00 
+Paris - s1.8xlarge (32 vCPU, 128GB RAM);;;;;0,9643 €; €704,00 
+Paris - c2.large (2 vCPU, 4GB RAM);;;;;0,0684 €; €50,00 
+Paris - c2.xlarge (4 vCPU, 8GB RAM);;;;;0,1369 €; €100,00 
+Paris - c2.2xlarge (8 vCPU, 16GB RAM);;;;;0,2739 €; €200,00 
+Paris - c1.large (2 vCPU, 2GB RAM);;;;;0,0684 €; €50,00 
+Paris - c1.xlarge (4vCPU, 4GB RAM);;;;;0,1369 €; €100,00 
+Paris - c1.2xlarge (8vCPU, 8GB RAM);;;;;0,2739 €; €200,00 
+Paris - c1.4xlarge (16vCPU, 16GB RAM);;;;;0,5479 €; €400,00 
+Paris - d2.xlarge.8 (4 vCPU, 32GB RAM, 2*1.8TB);;;;;0,1369 €; €100,00 
+Paris - d2.2xlarge.8 (8 vCPU, 64GB RAM, 4*1.8TB);;;;;0,2739 €; €200,00 
+Paris - d2.4xlarge.8 (16 vCPU, 128GB RAM, 8*1.8TB);;;;;0,5479 €; €400,00 
+Paris -  d2.6xlarge.8 (24 vCPU, 192GB RAM, 12*1.8TB);;;;;0,8219 €; €600,00 
+Paris - d2.8xlarge.8 (32 vCPU, 256GB RAM, 16*1.8TB);;;;;0,9643 €; €704,00 
+Paris - d2.12xlarge.8 (48 vCPU, 384GB RAM, 24*1.8TB);;;;;1,4465 €; €1 056,00 
+Paris - g1.xlarge (GPU, 4 vCPU, 8GB RAM);;;;;0,1369 €; €100,00 
+Paris - g1.2xlarge (GPU, 8 vCPU, 16GB RAM);;;;;0,2739 €; €200,00 
+Paris - g1.4xlarge (GPU, 16vCPU, 32GB RAM);;;;;0,5479 €; €400,00 
+Paris - g2.2xlarge  (GPU, 8vCPU, 64GB RAM);;;;;0,2739 €; €200,00 
+Paris - p2.2xlarge.8  (GPU, 8vCPU, 64GB RAM, 1*800GB);;;;;0,2739 €; €200,00 
+Paris - p2.4xlarge.8  (GPU, 16vCPU, 128GB RAM, 2*800GB);;;;;0,5479 €; €400,00 
+Paris - p2.8xlarge.8  (GPU, 32vCPU, 256GB RAM, 4*800GB);;;;;0,9643 €; €704,00 
+Paris - cc3.large.4 (2 vCPU, 8GB RAM);;;;;0,0684 €; €50,00 
+Paris - cc3.xlarge.4 (4 vCPU, 16GB RAM);;;;;0,1369 €; €100,00 
+Paris - cc3.2xlarge.4 (8 vCPU, 32GB RAM);;;;;0,2739 €; €200,00 
+Paris - cc3.4xlarge.4 (16 vCPU, 64GB RAM);;;;;0,5479 €; €400,00 
+Paris - cc3.8xlarge.4 (32 vCPU, 128GB RAM);;;;;0,9643 €; €704,00 
+ Paris - cc3.18xlarge.4 (76 vCPU, 304GB RAM) ;;;;;2,2904 €; €1 672,00 
+ Paris - cc3.19xlarge.4 (76 vCPU, 304GB RAM) ;;;;;2,2904 €; €1 672,00 
+Paris - c3.large.2 (2 vCPU, 4GB RAM);;;;;0,0684 €; €50,00 
+Paris - c3.xlarge.2 (4 vCPU, 8GB RAM);;;;;0,1369 €; €100,00 
+Paris - c3.2xlarge.2 (8 vCPU, 16GB RAM);;;;;0,2739 €; €200,00 
+Paris - c3.4xlarge.2 (16 vCPU, 32GB RAM);;;;;0,5479 €; €400,00 
+Paris - c3.8xlarge.2 (32 vCPU, 64GB RAM);;;;;0,9643 €; €704,00 
+Paris - c3.15xlarge.2 (60 vCPU, 128GB RAM);;;;;1,8082 €; €1 320,00 
+Paris -c6.large.2 (2 vCPU, 4GB RAM) in roadmap, controlled Availability;;;;;0,0684 €; €50,00 
+Paris - c6.xlarge.2 (4 vCPU, 8GB RAM) in roadmap, controlled Availability;;;;;0,1369 €; €100,00 
+Paris - c6.2xlarge.2 (8 vCPU, 16GB RAM) in roadmap, controlled Availability;;;;;0,2739 €; €200,00 
+Paris - c6.3xlarge.2 (12 vCPU, 24GB RAM) in roadmap, controlled Availability;;;;;0,4108 €; €300,00 
+Paris - c6.4xlarge.2 (16 vCPU, 32GB RAM) in roadmap, controlled Availability;;;;;0,5479 €; €400,00 
+Paris - c6.6xlarge.2 (24 vCPU, 48GB RAM) in roadmap, controlled Availability;;;;;0,6848 €; €600,00 
+Paris - c6.8xlarge.2 (32 vCPU, 64GB RAM) in roadmap, controlled Availability;;;;;0,9643 €; €704,00 
+Paris - c6.16xlarge.2 (64 vCPU, 128GB RAM) in roadmap, controlled Availability;;;;;1,3696 €; €1 200,00 
+Paris - c6.large.4 (2 vCPU, 8GB RAM) in roadmap, controlled Availability;;;;;0,0684 €; €50,00 
+Paris - c6.xlarge.4 (4 vCPU, 16GB RAM) in roadmap, controlled Availability;;;;;0,1369 €; €100,00 
+Paris - c6.2xlarge.4 (8 vCPU, 32GB RAM) in roadmap, controlled Availability;;;;;0,2739 €; €200,00 
+Paris - c6.3xlarge.4 (12 vCPU, 48GB RAM) in roadmap, controlled Availability;;;;;0,4108 €; €300,00 
+Paris - c6.4xlarge.4 (16 vCPU, 64GB RAM) in roadmap, controlled Availability;;;;;0,5479 €; €400,00 
+Paris - c6.6xlarge.4 (24 vCPU, 96GB RAM) in roadmap, controlled Availability;;;;;0,8218 €; €600,00 
+Paris - c6.8xlarge.4 (32 vCPU, 128GB RAM) in roadmap, controlled Availability;;;;;0,9643 €; €704,00 
+Paris - c6.16xlarge.4 (64 vCPU, 256GB RAM) in roadmap, controlled Availability;;;;;1,9286 €; €1 408,00 
+Paris - h1.large.2 (2 vCPU, 4GB RAM);;;;;0,0684 €; €50,00 
+Paris - h1.xlarge.2 (4 vCPU, 8GB RAM);;;;;0,1369 €; €100,00 
+Paris - h1.2xlarge.2 (8vCPU, 16GB RAM);;;;;0,2739 €; €200,00 
+Paris - h1.4xlarge.2 (16 vCPU, 32GB RAM);;;;;0,5479 €; €400,00 
+Paris - h1.8xlarge.2 (32 vCPU, 64GB RAM);;;;;0,9643 €; €704,00 
+Paris - h1.large.4 (2 vCPU, 8GB RAM);;;;;0,0684 €; €50,00 
+Paris - h1.xlarge.4 (4 vCPU, 16GB RAM);;;;;0,1369 €; €100,00 
+Paris - h1.2xlarge.4 (8 vCPU, 32GB RAM);;;;;0,2739 €; €200,00 
+Paris - h1.4xlarge.4 (16 vCPU, 64GB RAM);;;;;0,5479 €; €400,00 
+Paris - h1.8xlarge.4 (32 vCPU, 128GB RAM);;;;;0,9643 €; €704,00 
+Paris - h1.4xlarge.8  (16 vCPU, 128GB RAM);;;;;0,5479 €; €400,00 
+;;;;;;
+;;;;;;
+;;;;;;
+;;;;;;
+;;;;;;
+Amsterdam - s3.medium.4 (1 vCPU, 4GB RAM) (Promotion until June 30th 2020);;;;;0,0342 €; €25,00 
+Amsterdam - s3.large.2 (2 vCPU, 4GB RAM) (Promotion until June 30th 2020);;;;;0,0684 €; €50,00 
+Amsterdam - s3.xlarge.2 (4 vCPU, 8GB RAM) (Promotion until June 30th 2020);;;;;0,1369 €; €100,00 
+Amsterdam - s3.2xlarge.2 (8 vCPU, 16GB RAM) (Promotion until June 30th 2020);;;;;0,2739 €; €200,00 
+Amsterdam - s3.4xlarge.2 (16 vCPU, 32GB RAM) (Promotion until June 30th 2020);;;;;0,5479 €; €400,00 
+Amsterdam - s3.large.4 (2 vCPU, 8GB RAM) (Promotion until June 30th 2020);;;;;0,0684 €; €50,00 
+Amsterdam - s3.xlarge.4 (4 vCPU, 16GB RAM) (Promotion until June 30th 2020);;;;;0,1369 €; €100,00 
+Amsterdam - s3.2xlarge.4 (8 vCPU, 32GB RAM) (Promotion until June 30th 2020);;;;;0,2739 €; €200,00 
+Amsterdam - s3.4xlarge.4 (16 vCPU, 64GB RAM) (Promotion until June 30th 2020);;;;;0,5479 €; €400,00 
+Amsterdam - cc3.large.4 (2 vCPU, 8GB RAM);;;;;0,0684 €; €50,00 
+Amsterdam - cc3.xlarge.4 (4 vCPU, 16GB RAM);;;;;0,1369 €; €100,00 
+Amsterdam - cc3.2xlarge.4 (8 vCPU, 32GB RAM);;;;;0,2739 €; €200,00 
+Amsterdam - cc3.4xlarge.4 (16 vCPU, 64GB RAM);;;;;0,5479 €; €400,00 
+Amsterdam - cc3.8xlarge.4 (32 vCPU, 128GB RAM);;;;;0,9643 €; €704,00 
+Amsterdam - cc3.19xlarge.4 (76 vCPU, 304GB RAM);;;;;2,2904 €; €1 672,00 
+Amsterdam - g3.4xlarge.4 (8GPU, 16vCPU, 64 GB RAM);;;;;0,5479 €; €400,00 
+Amsterdam - g3.8xlarge.4  (16GPU, 32vCPU, 128GB RAM);;;;;0,9643 €; €704,00 
+Amsterdam - g5.xlarge.2 (1GPU, 4vCPU, 8GB RAM);;;;;0,1369 €; €100,00 
+Amsterdam - c3.large.2 (2 vCPU, 4GB RAM);;;;;0,0684 €; €50,00 
+Amsterdam - c3.xlarge.2 (4 vCPU, 8GB RAM);;;;;0,1369 €; €100,00 
+Amsterdam - c3.2xlarge.2 (8 vCPU, 16GB RAM);;;;;0,2739 €; €200,00 
+Amsterdam - c3.4xlarge.2 (16 vCPU, 32GB RAM);;;;;0,5479 €; €400,00 
+Amsterdam - c3.8xlarge.2 (32 vCPU, 64GB RAM);;;;;0,9643 €; €704,00 
+Amsterdam - c3.15xlarge.2 (60 vCPU, 128GB RAM);;;;;1,8082 €; €1 320,00 
+;;;;;;
+Paris - el2.6xlarge.8 (24vCPU, 384GB RAM);;;;;0,8219 €; €600,00 
+Paris - el2.12xlarge.4 (48vCPU, 768GB RAM);;;;;1,6438 €; €1 200,00 
+Paris - el2.24xlarge.2 (96vCPU, 1536GB RAM);;;;;3,2876 €; €2 400,00 
+Paris - el2.48xlarge.1 (192vCPU, 3072GB RAM);;;;;6,5752 €; €4 800,00 
+Paris - Hana 2TB (24vCPU, 288GB RAM);;;;;0,8219 €; €600,00 
+Paris - Hana 2TB (48vCPU, 576GB RAM);;;;;1,6438 €; €1 200,00 
+Paris - Hana 2TB (96vCPU, 1024GB RAM);;;;;3,2876 €; €2 400,00 
+Paris - Hana 2TB (192vCPU, 2048GB RAM);;;;;6,5752 €; €4 800,00 
+;;;;;;
+Licence SUSE Enterprise Linux Server for SAP Applications (compute exclus) [5bis];;;Facturé à la granularité de l'heure;;[5bis] [18bis];
+Produit;;;;;"€/Heure en sus des Prix Linux
+[5][5bis]";"€/mois en sus des Prix Linux
+[18bis]"
+Paris roadmap - e1.4xlarge (16 vCPU, 470GB RAM);;;;; 0,3923 € ;€272,09 
+Paris roadmap - e1.8xlarge (432vCPU, 940GB RAM);;;;; 0,3923 € ;€272,09 
+Paris roadmap - e2.3xlarge (12 vCPU, 256GB RAM);;;;; 0,3923 € ;€272,09 
+Paris roadmap - e2.4xlarge (18 vCPU, 445GB RAM);;;;; 0,3923 € ;€272,09 
+Paris roadmap - e2.9xlarge (36 vCPU, 890GB RAM);;;;; 0,3923 € ;€272,09 
+;;;;;;
+Licence SUSE Entreprise Linux SLES Basic (compute exclus);Facturé à la granularité de l'heure;;[5bis] [18bis];;;
+Produit;;;;;"€/Heure en sus des Prix Linux
+[5][5bis]";"€/mois en sus des Prix Linux
+[18bis]"
+Paris - t2.micro (1 vCPU, 1GB RAM);;;;; 0,0534 € ;€39,00 
+Paris - t2.small (1 vCPU, 2GB RAM);;;;; 0,0534 € ;€39,00 
+Paris - s3.small.1 (1vCPU, 1GB RAM);;;;; 0,0534 € ;€39,00 
+Paris - s3.medium.2 (1 vCPU, 2GB RAM);;;;; 0,0534 € ;€39,00 
+Paris - s3.large.2 (2 vCPU, 4GB RAM);;;;; 0,0534 € ;€39,00 
+Paris - s3.xlarge.2 (4 vCPU, 8GB RAM);;;;; 0,0972 € ;€71,00 
+Paris - s3.2xlarge.2 (8 vCPU, 16GB RAM);;;;; 0,0972 € ;€71,00 
+Paris - s3.4xlarge.2 (16 vCPU, 32GB RAM);;;;; 0,0972 € ;€71,00 
+Paris - s3.8xlarge.2 (32 vCPU, 64GB RAM);;;;; 0,0972 € ;€71,00 
+Paris - s3.medium.4 (1 vCPU, 4GB RAM) ;;;;; 0,0534 € ;€39,00 
+Paris - s3.large.4 (2 vCPU, 8GB RAM);;;;; 0,0534 € ;€39,00 
+Paris - s3.xlarge.4 (4 vCPU, 16GB RAM);;;;; 0,0972 € ;€71,00 
+Paris - s3.2xlarge.4 (8 vCPU, 32GB RAM);;;;; 0,0972 € ;€71,00 
+Paris - s3.4xlarge.4 (16 vCPU, 64GB RAM);;;;; 0,0972 € ;€71,00 
+Paris - s3.8xlarge.4 (32 vCPU, 128GB RAM);;;;; 0,0972 € ;€71,00 
+Paris - m1.large (2 vCPU, 16GB RAM);;;;; 0,0534 € ;€39,00 
+Paris - m1.xlarge (4 vCPU, 32GB RAM);;;;; 0,0972 € ;€71,00 
+Paris - m1.2xlarge (8 vCPU, 64GB RAM);;;;; 0,0972 € ;€71,00 
+Paris - m1.4xlarge (16 vCPU, 128GB RAM);;;;; 0,0972 € ;€71,00 
+Paris - m2.large.8 (2 vCPU, 16GB RAM);;;;; 0,0534 € ;€39,00 
+Paris - m2.xlarge.8 (4 vCPU, 32GB RAM);;;;; 0,0972 € ;€71,00 
+Paris - m2.2xlarge.8 (8 vCPU, 64GB RAM);;;;; 0,0972 € ;€71,00 
+Paris - m2.4xlarge.8 (16 vCPU, 128GB RAM);;;;; 0,0972 € ;€71,00 
+Paris - m2.8xlarge.8 (32 vCPU, 256GB RAM);;;;; 0,0972 € ;€71,00 
+Paris - m6.large.8 (2 vCPU, 16GB RAM) in roadmap, controlled Availability;;;;; 0,0534 € ;€39,00 
+Paris - m6.xlarge.8 (4 vCPU, 32GB RAM) in roadmap, controlled Availability;;;;; 0,0972 € ;€71,00 
+Paris - m6.2xlarge.8 (8 vCPU, 64GB RAM) in roadmap, controlled Availability;;;;; 0,0972 € ;€71,00 
+Paris - m6.3xlarge.8 (12 vCPU, 96GB RAM) in roadmap, controlled Availability;;;;; 0,0972 € ;€71,00 
+Paris - m6.4xlarge.8 (16 vCPU, 128GB RAM) in roadmap, controlled Availability;;;;; 0,0972 € ;€71,00 
+Paris - m6.6xlarge.8 (24 vCPU, 192GB RAM) in roadmap, controlled Availability;;;;; 0,0972 € ;€71,00 
+Paris - m6.8xlarge.8 (32 vCPU, 256GB RAM) in roadmap, controlled Availability;;;;; 0,0972 € ;€71,00 
+Paris - m6.16xlarge.8 (64 vCPU, 512GB RAM) in roadmap, controlled Availability;;;;; 0,0972 € ;€71,00 
+Paris - s1.medium (1 vCPU, 4GB RAM);;;;; 0,0534 € ;€39,00 
+Paris - s1.large (2 vCPU, 8GB RAM);;;;; 0,0534 € ;€39,00 
+Paris - s1.xlarge (4 vCPU, 16GB RAM);;;;; 0,0972 € ;€71,00 
+Paris - s1.2xlarge (8 vCPU, 32GB RAM);;;;; 0,0972 € ;€71,00 
+Paris - s1.4xlarge (16 vCPU, 64GB RAM);;;;; 0,0972 € ;€71,00 
+Paris - s1.8xlarge (32 vCPU, 128GB RAM);;;;; 0,0972 € ;€71,00 
+Paris - c2.large (2 vCPU, 4GB RAM);;;;; 0,0534 € ;€39,00 
+Paris - c2.xlarge (4 vCPU, 8GB RAM);;;;; 0,0972 € ;€71,00 
+Paris - c2.2xlarge (8 vCPU, 16GB RAM);;;;; 0,0972 € ;€71,00 
+Paris - c1.large (2 vCPU, 2GB RAM);;;;; 0,0534 € ;€39,00 
+Paris - c1.xlarge (4vCPU, 4GB RAM);;;;; 0,0972 € ;€71,00 
+Paris - c1.2xlarge (8vCPU, 8GB RAM);;;;; 0,0972 € ;€71,00 
+Paris - c1.4xlarge (16vCPU, 16GB RAM);;;;; 0,0972 € ;€71,00 
+Paris - d1.xlarge (6 vCPU, 55GB RAM, 3*1.8TB);;;;; 0,0972 € ;€71,00 
+Paris - d1.2xlarge (12 vCPU, 110GB RAM, 6*1.8TB);;;;; 0,0972 € ;€71,00 
+Paris - d1.4xlarge (24 vCPU, 220GB RAM, 12*1.8TB);;;;; 0,0972 € ;€71,00 
+Paris - d1.8xlarge (48 vCPU, 440GB RAM, 24*1.8TB);;;;; 0,0972 € ;€71,00 
+Paris - d2.xlarge.8 (4 vCPU, 32GB RAM, 2*1.8TB);;;;; 0,0972 € ;€71,00 
+Paris - d2.2xlarge.8 (8 vCPU, 64GB RAM, 4*1.8TB);;;;; 0,0972 € ;€71,00 
+Paris - d2.4xlarge.8 (16 vCPU, 128GB RAM, 8*1.8TB);;;;; 0,0972 € ;€71,00 
+Paris - d2.6xlarge.8 (24 vCPU, 192GB RAM, 12*1.8TB);;;;; 0,0972 € ;€71,00 
+Paris - d2.8xlarge.8 (32 vCPU, 256GB RAM, 16*1.8TB);;;;; 0,0972 € ;€71,00 
+Paris - d2.12xlarge.8 (48 vCPU, 384GB RAM, 24*1.8TB);;;;; 0,0972 € ;€71,00 
+Paris - cc3.large.4 (2 vCPU, 8GB RAM);;;;; 0,0534 € ;€39,00 
+Paris - cc3.xlarge.4 (4 vCPU, 16GB RAM);;;;; 0,0972 € ;€71,00 
+Paris - cc3.2xlarge.4 (8 vCPU, 32GB RAM);;;;; 0,0972 € ;€71,00 
+Paris - cc3.4xlarge.4 (16 vCPU, 64GB RAM);;;;; 0,0972 € ;€71,00 
+Paris - cc3.8xlarge.4 (32 vCPU, 128GB RAM);;;;; 0,0972 € ;€71,00 
+Paris - cc3.18xlarge.4 (76 vCPU, 304GB RAM);;;;; 0,0972 € ;€71,00 
+Paris - cc3.19xlarge.4 (76 vCPU, 304GB RAM);;;;; 0,0972 € ;€71,00 
+Paris - c3.large.2 (2 vCPU, 4GB RAM);;;;; 0,0534 € ;€39,00 
+Paris - c3.xlarge.2 (4 vCPU, 8GB RAM);;;;; 0,0972 € ;€71,00 
+Paris - c3.2xlarge.2 (8 vCPU, 16GB RAM);;;;; 0,0972 € ;€71,00 
+Paris - c3.4xlarge.2 (16 vCPU, 32GB RAM);;;;; 0,0972 € ;€71,00 
+Paris - c3.8xlarge.2 (32 vCPU, 64GB RAM);;;;; 0,0972 € ;€71,00 
+Paris - c3.15xlarge.2 (60 vCPU, 128GB RAM);;;;; 0,0972 € ;€71,00 
+Paris -c6.large.2 (2 vCPU, 4GB RAM) in roadmap, controlled Availability;;;;; 0,0534 € ;€39,00 
+Paris - c6.xlarge.2 (4 vCPU, 8GB RAM) in roadmap, controlled Availability;;;;; 0,0972 € ;€71,00 
+Paris - c6.2xlarge.2 (8 vCPU, 16GB RAM) in roadmap, controlled Availability;;;;; 0,0972 € ;€71,00 
+Paris - c6.3xlarge.2 (12 vCPU, 24GB RAM) in roadmap, controlled Availability;;;;; 0,0972 € ;€71,00 
+Paris - c6.4xlarge.2 (16 vCPU, 32GB RAM) in roadmap, controlled Availability;;;;; 0,0972 € ;€71,00 
+Paris - c6.6xlarge.2 (24 vCPU, 48GB RAM) in roadmap, controlled Availability;;;;; 0,0972 € ;€71,00 
+Paris - c6.8xlarge.2 (32 vCPU, 64GB RAM) in roadmap, controlled Availability;;;;; 0,0972 € ;€71,00 
+Paris - c6.16xlarge.2 (64 vCPU, 128GB RAM) in roadmap, controlled Availability;;;;; 0,0972 € ;€71,00 
+Paris - c6.large.4 (2 vCPU, 8GB RAM) in roadmap, controlled Availability;;;;; 0,0534 € ;€39,00 
+Paris - c6.xlarge.4 (4 vCPU, 16GB RAM) in roadmap, controlled Availability;;;;; 0,0972 € ;€71,00 
+Paris - c6.2xlarge.4 (8 vCPU, 32GB RAM) in roadmap, controlled Availability;;;;; 0,0972 € ;€71,00 
+Paris - c6.3xlarge.4 (12 vCPU, 48GB RAM) in roadmap, controlled Availability;;;;; 0,0972 € ;€71,00 
+Paris - c6.4xlarge.4 (16 vCPU, 64GB RAM) in roadmap, controlled Availability;;;;; 0,0972 € ;€71,00 
+Paris - c6.6xlarge.4 (24 vCPU, 96GB RAM) in roadmap, controlled Availability;;;;; 0,0972 € ;€71,00 
+Paris - c6.8xlarge.4 (32 vCPU, 128GB RAM) in roadmap, controlled Availability;;;;; 0,0972 € ;€71,00 
+Paris - c6.16xlarge.4 (64 vCPU, 256GB RAM) in roadmap, controlled Availability;;;;; 0,0972 € ;€71,00 
+Paris - h1.large.2 (2 vCPU, 4GB RAM);;;;; 0,0534 € ;€39,00 
+Paris - h1.xlarge.2 (4 vCPU, 8GB RAM);;;;; 0,0972 € ;€71,00 
+Paris - h1.2xlarge.2 (8vCPU, 16GB RAM);;;;; 0,0972 € ;€71,00 
+Paris - h1.4xlarge.2 (16 vCPU, 32GB RAM);;;;; 0,0972 € ;€71,00 
+Paris - h1.8xlarge.2 (32 vCPU, 64GB RAM);;;;; 0,0972 € ;€71,00 
+Paris - h1.large.4 (2 vCPU, 8GB RAM);;;;; 0,0534 € ;€39,00 
+Paris - h1.xlarge.4 (4 vCPU, 16GB RAM);;;;; 0,0972 € ;€71,00 
+Paris - h1.2xlarge.4 (8 vCPU, 32GB RAM);;;;; 0,0972 € ;€71,00 
+Paris - h1.4xlarge.4 (16 vCPU, 64GB RAM);;;;; 0,0972 € ;€71,00 
+Paris - h1.8xlarge.4 (32 vCPU, 128GB RAM);;;;; 0,0972 € ;€71,00 
+Paris - h1.4xlarge.8  (16 vCPU, 128GB RAM);;;;; 0,0972 € ;€71,00 
+Paris - hl2.8xlarge.8 (32vCPU, 256GB RAM);;;;; 0,0972 € ;€71,00 
+Paris - hl2.8xlarge.10 (32vCPU, 320GB RAM);;;;; 0,0972 € ;€71,00 
+Amsterdam - t2.micro (1 vCPU, 1GB RAM);;;;; 0,0534 € ;€39,00 
+Amsterdam - t2.small (1 vCPU, 2GB RAM);;;;; 0,0534 € ;€39,00 
+Amsterdam - s3.large.2 (2 vCPU, 4GB RAM) (Promotion until June 30th 2020);;;;; 0,0534 € ;€39,00 
+Amsterdam - s3.xlarge.2 (4 vCPU, 8GB RAM) (Promotion until June 30th 2020);;;;; 0,0972 € ;€71,00 
+Amsterdam - s3.2xlarge.2 (8 vCPU, 16GB RAM) (Promotion until June 30th 2020);;;;; 0,0972 € ;€71,00 
+Amsterdam - s3.4xlarge.2 (16 vCPU, 32GB RAM) (Promotion until June 30th 2020);;;;; 0,0972 € ;€71,00 
+Amsterdam - s3.large.4 (2 vCPU, 8GB RAM) (Promotion until June 30th 2020);;;;; 0,0534 € ;€39,00 
+Amsterdam - s3.xlarge.4 (4 vCPU, 16GB RAM) (Promotion until June 30th 2020);;;;; 0,0972 € ;€71,00 
+Amsterdam - s3.2xlarge.4 (8 vCPU, 32GB RAM) (Promotion until June 30th 2020);;;;; 0,0972 € ;€71,00 
+Amsterdam - s3.4xlarge.4 (16 vCPU, 64GB RAM) (Promotion until June 30th 2020);;;;; 0,0972 € ;€71,00 
+Amsterdam - m1.large (2 vCPU, 16GB RAM);;;;; 0,0534 € ;€39,00 
+Amsterdam - m1.xlarge (4 vCPU, 32GB RAM);;;;; 0,0972 € ;€71,00 
+Amsterdam - m1.2xlarge (8 vCPU, 64GB RAM);;;;; 0,0972 € ;€71,00 
+Amsterdam - m1.4xlarge (16 vCPU, 128GB RAM);;;;; 0,0972 € ;€71,00 
+Amsterdam - s1.medium (1 vCPU, 4GB RAM);;;;; 0,0534 € ;€39,00 
+Amsterdam - s1.large (2 vCPU, 8GB RAM);;;;; 0,0534 € ;€39,00 
+Amsterdam - s1.xlarge (4 vCPU, 16GB RAM);;;;; 0,0972 € ;€71,00 
+Amsterdam - s1.2xlarge (8 vCPU, 32GB RAM);;;;; 0,0972 € ;€71,00 
+Amsterdam - s1.4xlarge (16 vCPU, 64GB RAM);;;;; 0,0972 € ;€71,00 
+Amsterdam - s1.8xlarge (32 vCPU, 128GB RAM);;;;; 0,0972 € ;€71,00 
+Amsterdam - c2.large (2 vCPU, 4GB RAM);;;;; 0,0534 € ;€39,00 
+Amsterdam - c2.xlarge (4 vCPU, 8GB RAM);;;;; 0,0972 € ;€71,00 
+Amsterdam - c2.2xlarge (8 vCPU, 16GB RAM);;;;; 0,0972 € ;€71,00 
+Amsterdam - c1.large (2 vCPU, 2GB RAM);;;;; 0,0534 € ;€39,00 
+Amsterdam - c1.xlarge (4vCPU, 4GB RAM);;;;; 0,0972 € ;€71,00 
+Amsterdam - c1.2xlarge (8vCPU, 8GB RAM);;;;; 0,0972 € ;€71,00 
+Amsterdam - c1.4xlarge (16vCPU, 16GB RAM);;;;; 0,0972 € ;€71,00 
+Amsterdam - cc3.large.4 (2 vCPU, 8GB RAM);;;;; 0,0534 € ;€39,00 
+Amsterdam - cc3.xlarge.4 (4 vCPU, 16GB RAM);;;;; 0,0972 € ;€71,00 
+Amsterdam - cc3.2xlarge.4 (8 vCPU, 32GB RAM);;;;; 0,0972 € ;€71,00 
+Amsterdam - cc3.4xlarge.4 (16 vCPU, 64GB RAM);;;;; 0,0972 € ;€71,00 
+Amsterdam - cc3.8xlarge.4 (32 vCPU, 128GB RAM);;;;; 0,0972 € ;€71,00 
+Amsterdam - cc3.19xlarge.4 (76 vCPU, 304GB RAM);;;;; 0,0972 € ;€71,00 
+Amsterdam - c3.large.2 (2 vCPU, 4GB RAM);;;;; 0,0534 € ;€39,00 
+Amsterdam - c3.xlarge.2 (4 vCPU, 8GB RAM);;;;; 0,0972 € ;€71,00 
+Amsterdam - c3.2xlarge.2 (8 vCPU, 16GB RAM);;;;; 0,0972 € ;€71,00 
+Amsterdam - c3.4xlarge.2 (16 vCPU, 32GB RAM);;;;; 0,0972 € ;€71,00 
+Amsterdam - c3.8xlarge.2 (32 vCPU, 64GB RAM);;;;; 0,0972 € ;€71,00 
+Amsterdam - c3.15xlarge.2 (60 vCPU, 128GB RAM);;;;; 0,0972 € ;€71,00 
+;;;;;;
+Paris - el2.6xlarge.8 (24vCPU, 384GB RAM);;;;; 0,0972 € ;€71,00 
+Paris - el2.12xlarge.4 (48vCPU, 768GB RAM);;;;; 0,0972 € ;€71,00 
+Paris - el2.24xlarge.2 (96vCPU, 1536GB RAM);;;;; 0,0972 € ;€71,00 
+Paris - el2.48xlarge.1 (192vCPU, 3072GB RAM);;;;; 0,0972 € ;€71,00 
+Paris - Hana 2TB (24vCPU, 288GB RAM);;;;; 0,0972 € ;€71,00 
+Paris - Hana 2TB (48vCPU, 576GB RAM);;;;; 0,0972 € ;€71,00 
+Paris - Hana 2TB (96vCPU, 1024GB RAM);;;;; 0,0972 € ;€71,00 
+Paris - Hana 2TB (192vCPU, 2048GB RAM);;;;; 0,0972 € ;€71,00 
+;;;;;;
+Licence SUSE Entreprise Linux SLES pour SAP (compute exclus);Facturé à la granularité de l'heure;;[5bis] [18bis];;;
+Produit;;;;;"€/Heure en sus des Prix Linux
+[5][5bis]";"€/mois en sus des Prix Linux
+[18bis]"
+Paris - t2.micro (1 vCPU, 1GB RAM);;;;; 0,1424 € ;€104,00 
+Paris - t2.small (1 vCPU, 2GB RAM);;;;; 0,1424 € ;€104,00 
+Paris - s3.small.1 (1vCPU, 1GB RAM);;;;; 0,1424 € ;€104,00 
+Paris - s3.medium.2 (1 vCPU, 2GB RAM);;;;; 0,1424 € ;€104,00 
+Paris - s3.large.2 (2 vCPU, 4GB RAM);;;;; 0,1424 € ;€104,00 
+Paris - s3.xlarge.2 (4 vCPU, 8GB RAM);;;;; 0,2821 € ;€206,00 
+Paris - s3.2xlarge.2 (8 vCPU, 16GB RAM);;;;; 0,3424 € ;€250,00 
+Paris - s3.4xlarge.2 (16 vCPU, 32GB RAM);;;;; 0,3424 € ;€250,00 
+Paris - s3.8xlarge.2 (32 vCPU, 64GB RAM);;;;; 0,3424 € ;€250,00 
+Paris - s3.medium.4 (1 vCPU, 4GB RAM);;;;; 0,1424 € ;€104,00 
+Paris - s3.large.4 (2 vCPU, 8GB RAM);;;;; 0,1424 € ;€104,00 
+Paris - s3.xlarge.4 (4 vCPU, 16GB RAM);;;;; 0,2821 € ;€206,00 
+Paris - s3.2xlarge.4 (8 vCPU, 32GB RAM);;;;; 0,3424 € ;€250,00 
+Paris - s3.4xlarge.4 (16 vCPU, 64GB RAM);;;;; 0,3424 € ;€250,00 
+Paris - s3.8xlarge.4 (32 vCPU, 128GB RAM);;;;; 0,3424 € ;€250,00 
+Paris - m1.large (2 vCPU, 16GB RAM);;;;; 0,1424 € ;€104,00 
+Paris - m1.xlarge (4 vCPU, 32GB RAM);;;;; 0,2821 € ;€206,00 
+Paris - m1.2xlarge (8 vCPU, 64GB RAM);;;;; 0,3424 € ;€250,00 
+Paris - m1.4xlarge (16 vCPU, 128GB RAM);;;;; 0,3424 € ;€250,00 
+Paris - m2.large.8 (2 vCPU, 16GB RAM);;;;; 0,1424 € ;€104,00 
+Paris - m2.xlarge.8 (4 vCPU, 32GB RAM);;;;; 0,2821 € ;€206,00 
+Paris - m2.2xlarge.8 (8 vCPU, 64GB RAM);;;;; 0,3424 € ;€250,00 
+Paris - m2.4xlarge.8 (16 vCPU, 128GB RAM);;;;; 0,3424 € ;€250,00 
+Paris - m2.8xlarge.8 (32 vCPU, 256GB RAM);;;;; 0,3424 € ;€250,00 
+Paris - m6.large.8 (2 vCPU, 16GB RAM) in roadmap, controlled Availability;;;;; 0,1424 € ;€104,00 
+Paris - m6.xlarge.8 (4 vCPU, 32GB RAM) in roadmap, controlled Availability;;;;; 0,2821 € ;€206,00 
+Paris - m6.2xlarge.8 (8 vCPU, 64GB RAM) in roadmap, controlled Availability;;;;; 0,3424 € ;€250,00 
+Paris - m6.3xlarge.8 (12 vCPU, 96GB RAM) in roadmap, controlled Availability;;;;; 0,3424 € ;€250,00 
+Paris - m6.4xlarge.8 (16 vCPU, 128GB RAM) in roadmap, controlled Availability;;;;; 0,3424 € ;€250,00 
+Paris - m6.6xlarge.8 (24 vCPU, 192GB RAM) in roadmap, controlled Availability;;;;; 0,3424 € ;€250,00 
+Paris - m6.8xlarge.8 (32 vCPU, 256GB RAM) in roadmap, controlled Availability;;;;; 0,3424 € ;€250,00 
+Paris - m6.16xlarge.8 (64 vCPU, 512GB RAM) in roadmap, controlled Availability;;;;; 0,3424 € ;€250,00 
+Paris - s1.medium (1 vCPU, 4GB RAM);;;;; 0,1424 € ;€104,00 
+Paris - s1.large (2 vCPU, 8GB RAM);;;;; 0,1424 € ;€104,00 
+Paris - s1.xlarge (4 vCPU, 16GB RAM);;;;; 0,2821 € ;€206,00 
+Paris - s1.2xlarge (8 vCPU, 32GB RAM);;;;; 0,3424 € ;€250,00 
+Paris - s1.4xlarge (16 vCPU, 64GB RAM);;;;; 0,3424 € ;€250,00 
+Paris - s1.8xlarge (32 vCPU, 128GB RAM);;;;; 0,3424 € ;€250,00 
+Paris - c2.large (2 vCPU, 4GB RAM);;;;; 0,1424 € ;€104,00 
+Paris - c2.xlarge (4 vCPU, 8GB RAM);;;;; 0,2821 € ;€206,00 
+Paris - c2.2xlarge (8 vCPU, 16GB RAM);;;;; 0,3424 € ;€250,00 
+Paris - c1.large (2 vCPU, 2GB RAM);;;;; 0,1424 € ;€104,00 
+Paris - c1.xlarge (4vCPU, 4GB RAM);;;;; 0,2821 € ;€206,00 
+Paris - c1.2xlarge (8vCPU, 8GB RAM);;;;; 0,3424 € ;€250,00 
+Paris - c1.4xlarge (16vCPU, 16GB RAM);;;;; 0,3424 € ;€250,00 
+Paris - d1.xlarge (6 vCPU, 55GB RAM, 3*1.8TB);;;;; 0,3424 € ;€250,00 
+Paris - d1.2xlarge (12 vCPU, 110GB RAM, 6*1.8TB);;;;; 0,3424 € ;€250,00 
+Paris - d1.4xlarge (24 vCPU, 220GB RAM, 12*1.8TB);;;;; 0,3424 € ;€250,00 
+Paris - d1.8xlarge (48 vCPU, 440GB RAM, 24*1.8TB);;;;; 0,3424 € ;€250,00 
+Paris - d2.xlarge.8 (4 vCPU, 32GB RAM, 2*1.8TB);;;;; 0,2821 € ;€206,00 
+Paris - d2.2xlarge.8 (8 vCPU, 64GB RAM, 4*1.8TB);;;;; 0,3424 € ;€250,00 
+Paris - d2.4xlarge.8 (16 vCPU, 128GB RAM, 8*1.8TB);;;;; 0,3424 € ;€250,00 
+Paris - d2.6xlarge.8 (24 vCPU, 192GB RAM, 12*1.8TB);;;;; 0,3424 € ;€250,00 
+Paris - d2.8xlarge.8 (32 vCPU, 256GB RAM, 16*1.8TB);;;;; 0,3424 € ;€250,00 
+Paris - d2.12xlarge.8 (48 vCPU, 384GB RAM, 24*1.8TB);;;;; 0,3424 € ;€250,00 
+Paris - cc3.large.4 (2 vCPU, 8GB RAM);;;;; 0,1424 € ;€104,00 
+Paris - cc3.xlarge.4 (4 vCPU, 16GB RAM);;;;; 0,2821 € ;€206,00 
+Paris - cc3.2xlarge.4 (8 vCPU, 32GB RAM);;;;; 0,3424 € ;€250,00 
+Paris - cc3.4xlarge.4 (16 vCPU, 64GB RAM);;;;; 0,3424 € ;€250,00 
+Paris - cc3.8xlarge.4 (32 vCPU, 128GB RAM);;;;; 0,3424 € ;€250,00 
+Paris - cc3.18xlarge.4 (76 vCPU, 304GB RAM);;;;; 0,3424 € ;€250,00 
+Paris - cc3.19xlarge.4 (76 vCPU, 304GB RAM);;;;; 0,3424 € ;€250,00 
+Paris - c3.large.2 (2 vCPU, 4GB RAM);;;;; 0,1424 € ;€104,00 
+Paris - c3.xlarge.2 (4 vCPU, 8GB RAM);;;;; 0,2821 € ;€206,00 
+Paris - c3.2xlarge.2 (8 vCPU, 16GB RAM);;;;; 0,3424 € ;€250,00 
+Paris - c3.4xlarge.2 (16 vCPU, 32GB RAM);;;;; 0,3424 € ;€250,00 
+Paris - c3.8xlarge.2 (32 vCPU, 64GB RAM);;;;; 0,3424 € ;€250,00 
+Paris - c3.15xlarge.2 (60 vCPU, 128GB RAM);;;;; 0,3424 € ;€250,00 
+Paris -c6.large.2 (2 vCPU, 4GB RAM) in roadmap, controlled Availability;;;;; 0,1424 € ;€104,00 
+Paris - c6.xlarge.2 (4 vCPU, 8GB RAM) in roadmap, controlled Availability;;;;; 0,2821 € ;€206,00 
+Paris - c6.2xlarge.2 (8 vCPU, 16GB RAM) in roadmap, controlled Availability;;;;; 0,3424 € ;€250,00 
+Paris - c6.3xlarge.2 (12 vCPU, 24GB RAM) in roadmap, controlled Availability;;;;; 0,3424 € ;€250,00 
+Paris - c6.4xlarge.2 (16 vCPU, 32GB RAM) in roadmap, controlled Availability;;;;; 0,3424 € ;€250,00 
+Paris - c6.6xlarge.2 (24 vCPU, 48GB RAM) in roadmap, controlled Availability;;;;; 0,3424 € ;€250,00 
+Paris - c6.8xlarge.2 (32 vCPU, 64GB RAM) in roadmap, controlled Availability;;;;; 0,3424 € ;€250,00 
+Paris - c6.16xlarge.2 (64 vCPU, 128GB RAM) in roadmap, controlled Availability;;;;; 0,3424 € ;€250,00 
+Paris - c6.large.4 (2 vCPU, 8GB RAM) in roadmap, controlled Availability;;;;; 0,1424 € ;€104,00 
+Paris - c6.xlarge.4 (4 vCPU, 16GB RAM) in roadmap, controlled Availability;;;;; 0,2821 € ;€206,00 
+Paris - c6.2xlarge.4 (8 vCPU, 32GB RAM) in roadmap, controlled Availability;;;;; 0,3424 € ;€250,00 
+Paris - c6.3xlarge.4 (12 vCPU, 48GB RAM) in roadmap, controlled Availability;;;;; 0,3424 € ;€250,00 
+Paris - c6.4xlarge.4 (16 vCPU, 64GB RAM) in roadmap, controlled Availability;;;;; 0,3424 € ;€250,00 
+Paris - c6.6xlarge.4 (24 vCPU, 96GB RAM) in roadmap, controlled Availability;;;;; 0,3424 € ;€250,00 
+Paris - c6.8xlarge.4 (32 vCPU, 128GB RAM) in roadmap, controlled Availability;;;;; 0,3424 € ;€250,00 
+Paris - c6.16xlarge.4 (64 vCPU, 256GB RAM) in roadmap, controlled Availability;;;;; 0,3424 € ;€250,00 
+Paris - h1.large.2 (2 vCPU, 4GB RAM);;;;; 0,1424 € ;€104,00 
+Paris - h1.xlarge.2 (4 vCPU, 8GB RAM);;;;; 0,2821 € ;€206,00 
+Paris - h1.2xlarge.2 (8vCPU, 16GB RAM);;;;; 0,3424 € ;€250,00 
+Paris - h1.4xlarge.2 (16 vCPU, 32GB RAM);;;;; 0,3424 € ;€250,00 
+Paris - h1.8xlarge.2 (32 vCPU, 64GB RAM);;;;; 0,3424 € ;€250,00 
+Paris - h1.large.4 (2 vCPU, 8GB RAM);;;;; 0,1424 € ;€104,00 
+Paris - h1.xlarge.4 (4 vCPU, 16GB RAM);;;;; 0,2821 € ;€206,00 
+Paris - h1.2xlarge.4 (8 vCPU, 32GB RAM);;;;; 0,3424 € ;€250,00 
+Paris - h1.4xlarge.4 (16 vCPU, 64GB RAM);;;;; 0,3424 € ;€250,00 
+Paris - h1.8xlarge.4 (32 vCPU, 128GB RAM);;;;; 0,3424 € ;€250,00 
+Paris - h1.4xlarge.8  (16 vCPU, 128GB RAM);;;;; 0,3424 € ;€250,00 
+Paris - hl2.8xlarge.8 (32vCPU, 256GB RAM);;;;; 0,3424 € ;€250,00 
+Paris - hl2.8xlarge.10 (32vCPU, 320GB RAM);;;;; 0,3424 € ;€250,00 
+Amsterdam - t2.micro (1 vCPU, 1GB RAM);;;;; 0,1424 € ;€104,00 
+Amsterdam - t2.small (1 vCPU, 2GB RAM);;;;; 0,1424 € ;€104,00 
+Amsterdam - s3.large.2 (2 vCPU, 4GB RAM) (Promotion until June 30th 2020);;;;; 0,1424 € ;€104,00 
+Amsterdam - s3.xlarge.2 (4 vCPU, 8GB RAM) (Promotion until June 30th 2020);;;;; 0,2821 € ;€206,00 
+Amsterdam - s3.2xlarge.2 (8 vCPU, 16GB RAM) (Promotion until June 30th 2020);;;;; 0,3424 € ;€250,00 
+Amsterdam - s3.4xlarge.2 (16 vCPU, 32GB RAM) (Promotion until June 30th 2020);;;;; 0,3424 € ;€250,00 
+Amsterdam - s3.large.4 (2 vCPU, 8GB RAM) (Promotion until June 30th 2020);;;;; 0,1424 € ;€104,00 
+Amsterdam - s3.xlarge.4 (4 vCPU, 16GB RAM) (Promotion until June 30th 2020);;;;; 0,2821 € ;€206,00 
+Amsterdam - s3.2xlarge.4 (8 vCPU, 32GB RAM) (Promotion until June 30th 2020);;;;; 0,3424 € ;€250,00 
+Amsterdam - s3.4xlarge.4 (16 vCPU, 64GB RAM) (Promotion until June 30th 2020);;;;; 0,3424 € ;€250,00 
+Amsterdam - m1.large (2 vCPU, 16GB RAM);;;;; 0,1424 € ;€104,00 
+Amsterdam - m1.xlarge (4 vCPU, 32GB RAM);;;;; 0,2821 € ;€206,00 
+Amsterdam - m1.2xlarge (8 vCPU, 64GB RAM);;;;; 0,3424 € ;€250,00 
+Amsterdam - m1.4xlarge (16 vCPU, 128GB RAM);;;;; 0,3424 € ;€250,00 
+Amsterdam - s1.medium (1 vCPU, 4GB RAM);;;;; 0,1424 € ;€104,00 
+Amsterdam - s1.large (2 vCPU, 8GB RAM);;;;; 0,1424 € ;€104,00 
+Amsterdam - s1.xlarge (4 vCPU, 16GB RAM);;;;; 0,2821 € ;€206,00 
+Amsterdam - s1.2xlarge (8 vCPU, 32GB RAM);;;;; 0,3424 € ;€250,00 
+Amsterdam - s1.4xlarge (16 vCPU, 64GB RAM);;;;; 0,3424 € ;€250,00 
+Amsterdam - s1.8xlarge (32 vCPU, 128GB RAM);;;;; 0,3424 € ;€250,00 
+Amsterdam - c2.large (2 vCPU, 4GB RAM);;;;; 0,1424 € ;€104,00 
+Amsterdam - c2.xlarge (4 vCPU, 8GB RAM);;;;; 0,2821 € ;€206,00 
+Amsterdam - c2.2xlarge (8 vCPU, 16GB RAM);;;;; 0,3424 € ;€250,00 
+Amsterdam - c1.large (2 vCPU, 2GB RAM);;;;; 0,1424 € ;€104,00 
+Amsterdam - c1.xlarge (4vCPU, 4GB RAM);;;;; 0,2821 € ;€206,00 
+Amsterdam - c1.2xlarge (8vCPU, 8GB RAM);;;;; 0,3424 € ;€250,00 
+Amsterdam - c1.4xlarge (16vCPU, 16GB RAM);;;;; 0,3424 € ;€250,00 
+Amsterdam - cc3.large.4 (2 vCPU, 8GB RAM);;;;; 0,1424 € ;€104,00 
+Amsterdam - cc3.xlarge.4 (4 vCPU, 16GB RAM);;;;; 0,2821 € ;€206,00 
+Amsterdam - cc3.2xlarge.4 (8 vCPU, 32GB RAM);;;;; 0,3424 € ;€250,00 
+Amsterdam - cc3.4xlarge.4 (16 vCPU, 64GB RAM);;;;; 0,3424 € ;€250,00 
+Amsterdam - cc3.8xlarge.4 (32 vCPU, 128GB RAM);;;;; 0,3424 € ;€250,00 
+Amsterdam - cc3.19xlarge.4 (76 vCPU, 304GB RAM);;;;; 0,3424 € ;€250,00 
+Amsterdam - c3.large.2 (2 vCPU, 4GB RAM);;;;; 0,1424 € ;€104,00 
+Amsterdam - c3.xlarge.2 (4 vCPU, 8GB RAM);;;;; 0,2821 € ;€206,00 
+Amsterdam - c3.2xlarge.2 (8 vCPU, 16GB RAM);;;;; 0,3424 € ;€250,00 
+Amsterdam - c3.4xlarge.2 (16 vCPU, 32GB RAM);;;;; 0,3424 € ;€250,00 
+Amsterdam - c3.8xlarge.2 (32 vCPU, 64GB RAM);;;;; 0,3424 € ;€250,00 
+Amsterdam - c3.15xlarge.2 (60 vCPU, 128GB RAM);;;;; 0,3424 € ;€250,00 
+;;;;;;
+Paris - el2.6xlarge.8 (24vCPU, 384GB RAM);;;;; 0,3424 € ;€250,00 
+Paris - el2.12xlarge.4 (48vCPU, 768GB RAM);;;;; 0,3424 € ;€250,00 
+Paris - el2.24xlarge.2 (96vCPU, 1536GB RAM);;;;; 0,3424 € ;€250,00 
+Paris - el2.48xlarge.1 (192vCPU, 3072GB RAM);;;;; 0,3424 € ;€250,00 
+Paris - Hana 2TB (24vCPU, 288GB RAM);;;;; 0,3424 € ;€250,00 
+Paris - Hana 2TB (48vCPU, 576GB RAM);;;;; 0,3424 € ;€250,00 
+Paris - Hana 2TB (96vCPU, 1024GB RAM);;;;; 0,3424 € ;€250,00 
+Paris - Hana 2TB (192vCPU, 2048GB RAM);;;;; 0,3424 € ;€250,00 
+;;;;;;
+;;;;;;
+Licence RedHat OS image (compute exclus);Facturé à la granularité de l'heure;;[5bis] [18bis];;;
+Produit;;;;;"€/Heure en sus des Prix Linux
+[5][5bis]";"€/mois en sus des Prix Linux
+[18bis]"
+Paris - t2.micro (1 vCPU, 1GB RAM);;;;; 0,0493 € ;€36,00 
+Paris - t2.small (1 vCPU, 2GB RAM);;;;; 0,0493 € ;€36,00 
+Paris - s3.small.1 (1vCPU, 1GB RAM);;;;; 0,0493 € ;€36,00 
+Paris - s3.medium.2 (1 vCPU, 2GB RAM);;;;; 0,0493 € ;€36,00 
+Paris - s3.medium.4 (1 vCPU, 4GB RAM);;;;; 0,0493 € ;€36,00 
+Paris - s3.large.2 (2 vCPU, 4GB RAM);;;;; 0,0493 € ;€36,00 
+Paris - s3.xlarge.2 (4 vCPU, 8GB RAM);;;;; 0,0493 € ;€36,00 
+Paris - s3.2xlarge.2 (8 vCPU, 16GB RAM);;;;; 0,1095 € ;€80,00 
+Paris - s3.4xlarge.2 (16 vCPU, 32GB RAM);;;;; 0,1095 € ;€80,00 
+Paris - s3.8xlarge.2 (32 vCPU, 64GB RAM);;;;; 0,1095 € ;€80,00 
+Paris - s3.large.4 (2 vCPU, 8GB RAM);;;;; 0,0493 € ;€36,00 
+Paris - s3.xlarge.4 (4 vCPU, 16GB RAM);;;;; 0,0493 € ;€36,00 
+Paris - s3.2xlarge.4 (8 vCPU, 32GB RAM);;;;; 0,1095 € ;€80,00 
+Paris - s3.4xlarge.4 (16 vCPU, 64GB RAM);;;;; 0,1095 € ;€80,00 
+Paris - s3.8xlarge.4 (32 vCPU, 128GB RAM);;;;; 0,1095 € ;€80,00 
+Paris - m1.large (2 vCPU, 16GB RAM);;;;; 0,0493 € ;€36,00 
+Paris - m1.xlarge (4 vCPU, 32GB RAM);;;;; 0,0493 € ;€36,00 
+Paris - m1.2xlarge (8 vCPU, 64GB RAM);;;;; 0,1095 € ;€80,00 
+Paris - m1.4xlarge (16 vCPU, 128GB RAM);;;;; 0,1095 € ;€80,00 
+Paris - m2.large.8 (2 vCPU, 16GB RAM);;;;; 0,0493 € ;€36,00 
+Paris - m2.xlarge.8 (4 vCPU, 32GB RAM);;;;; 0,0493 € ;€36,00 
+Paris - m2.2xlarge.8 (8 vCPU, 64GB RAM);;;;; 0,1095 € ;€80,00 
+Paris - m2.4xlarge.8 (16 vCPU, 128GB RAM);;;;; 0,1095 € ;€80,00 
+Paris - m2.8xlarge.8 (32 vCPU, 256GB RAM);;;;; 0,1095 € ;€80,00 
+Paris - m6.large.8 (2 vCPU, 16GB RAM) in roadmap, controlled Availability;;;;; 0,0493 € ;€36,00 
+Paris - m6.xlarge.8 (4 vCPU, 32GB RAM) in roadmap, controlled Availability;;;;; 0,0493 € ;€36,00 
+Paris - m6.2xlarge.8 (8 vCPU, 64GB RAM) in roadmap, controlled Availability;;;;; 0,1095 € ;€80,00 
+Paris - m6.3xlarge.8 (12 vCPU, 96GB RAM) in roadmap, controlled Availability;;;;; 0,1095 € ;€80,00 
+Paris - m6.4xlarge.8 (16 vCPU, 128GB RAM) in roadmap, controlled Availability;;;;; 0,1095 € ;€80,00 
+Paris - m6.6xlarge.8 (24 vCPU, 192GB RAM) in roadmap, controlled Availability;;;;; 0,1095 € ;€80,00 
+Paris - m6.8xlarge.8 (32 vCPU, 256GB RAM) in roadmap, controlled Availability;;;;; 0,1095 € ;€80,00 
+Paris - m6.16xlarge.8 (64 vCPU, 512GB RAM) in roadmap, controlled Availability;;;;; 0,1095 € ;€80,00 
+Paris - s1.medium (1 vCPU, 4GB RAM);;;;; 0,0493 € ;€36,00 
+Paris - s1.large (2 vCPU, 8GB RAM);;;;; 0,0493 € ;€36,00 
+Paris - s1.xlarge (4 vCPU, 16GB RAM);;;;; 0,0493 € ;€36,00 
+Paris - s1.2xlarge (8 vCPU, 32GB RAM);;;;; 0,1095 € ;€80,00 
+Paris - s1.4xlarge (16 vCPU, 64GB RAM);;;;; 0,1095 € ;€80,00 
+Paris - s1.8xlarge (32 vCPU, 128GB RAM);;;;; 0,1095 € ;€80,00 
+Paris - c1.large (2 vCPU, 2GB RAM);;;;; 0,0493 € ;€36,00 
+Paris - c1.xlarge (4vCPU, 4GB RAM);;;;; 0,0493 € ;€36,00 
+Paris - c1.2xlarge (8vCPU, 8GB RAM);;;;; 0,1095 € ;€80,00 
+Paris - c1.4xlarge (16vCPU, 16GB RAM);;;;; 0,1095 € ;€80,00 
+Paris - c2.large (2 vCPU, 4GB RAM);;;;; 0,0493 € ;€36,00 
+Paris - c2.xlarge (4 vCPU, 8GB RAM);;;;; 0,0493 € ;€36,00 
+Paris - c2.2xlarge (8 vCPU, 16GB RAM);;;;; 0,1095 € ;€80,00 
+Paris - d1.xlarge (6 vCPU, 55GB RAM, 3*1.8TB);;;;; 0,1095 € ;€80,00 
+Paris - d1.2xlarge (12 vCPU, 110GB RAM, 6*1.8TB);;;;; 0,1095 € ;€80,00 
+Paris - d1.4xlarge (24 vCPU, 220GB RAM, 12*1.8TB);;;;; 0,1095 € ;€80,00 
+Paris - d1.8xlarge (48 vCPU, 440GB RAM, 24*1.8TB);;;;; 0,1095 € ;€80,00 
+Paris - d2.xlarge.8 (4 vCPU, 32GB RAM, 2*1.8TB);;;;; 0,0493 € ;€36,00 
+Paris - d2.2xlarge.8 (8 vCPU, 64GB RAM, 4*1.8TB);;;;; 0,1095 € ;€80,00 
+Paris - d2.4xlarge.8 (16 vCPU, 128GB RAM, 8*1.8TB);;;;; 0,1095 € ;€80,00 
+Paris - d2.6xlarge.8 (24 vCPU, 192GB RAM, 12*1.8TB);;;;; 0,1095 € ;€80,00 
+Paris - d2.8xlarge.8 (32 vCPU, 256GB RAM, 16*1.8TB);;;;; 0,1095 € ;€80,00 
+Paris - d2.12xlarge.8 (48 vCPU, 384GB RAM, 24*1.8TB);;;;; 0,1095 € ;€80,00 
+Paris - p2.2xlarge.8  (GPU, 8vCPU, 64GB RAM);;;;; 0,1095 € ;€80,00 
+Paris - p2.4xlarge.8  (GPU, 16vCPU, 128GB RAM);;;;; 0,1095 € ;€80,00 
+Paris - p2.8xlarge.8  (GPU, 32vCPU, 256GB RAM);;;;; 0,1095 € ;€80,00 
+Paris - cc3.large.4 (2 vCPU, 8GB RAM);;;;; 0,0493 € ;€36,00 
+Paris - cc3.xlarge.4 (4 vCPU, 16GB RAM);;;;; 0,0493 € ;€36,00 
+Paris - cc3.2xlarge.4 (8 vCPU, 32GB RAM);;;;; 0,1095 € ;€80,00 
+Paris - cc3.4xlarge.4 (16 vCPU, 64GB RAM);;;;; 0,1095 € ;€80,00 
+Paris - cc3.8xlarge.4 (32 vCPU, 128GB RAM);;;;; 0,1095 € ;€80,00 
+Paris - cc3.18xlarge.4 (76 vCPU, 304GB RAM);;;;; 0,1095 € ;€80,00 
+Paris - cc3.19xlarge.4 (76 vCPU, 304GB RAM);;;;; 0,1095 € ;€80,00 
+Paris - c3.large.2 (2 vCPU, 4GB RAM);;;;; 0,0493 € ;€36,00 
+Paris - c3.xlarge.2 (4 vCPU, 8GB RAM);;;;; 0,0493 € ;€36,00 
+Paris - c3.2xlarge.2 (8 vCPU, 16GB RAM);;;;; 0,1095 € ;€80,00 
+Paris - c3.4xlarge.2 (16 vCPU, 32GB RAM);;;;; 0,1095 € ;€80,00 
+Paris - c3.8xlarge.2 (32 vCPU, 64GB RAM);;;;; 0,1095 € ;€80,00 
+Paris - c3.15xlarge.2 (60 vCPU, 128GB RAM);;;;; 0,1095 € ;€80,00 
+Paris -c6.large.2 (2 vCPU, 4GB RAM) in roadmap, controlled Availability;;;;; 0,0493 € ;€36,00 
+Paris - c6.xlarge.2 (4 vCPU, 8GB RAM) in roadmap, controlled Availability;;;;; 0,0493 € ;€36,00 
+Paris - c6.2xlarge.2 (8 vCPU, 16GB RAM) in roadmap, controlled Availability;;;;; 0,1095 € ;€80,00 
+Paris - c6.3xlarge.2 (12 vCPU, 24GB RAM) in roadmap, controlled Availability;;;;; 0,1095 € ;€80,00 
+Paris - c6.4xlarge.2 (16 vCPU, 32GB RAM) in roadmap, controlled Availability;;;;; 0,1095 € ;€80,00 
+Paris - c6.6xlarge.2 (24 vCPU, 48GB RAM) in roadmap, controlled Availability;;;;; 0,1095 € ;€80,00 
+Paris - c6.8xlarge.2 (32 vCPU, 64GB RAM) in roadmap, controlled Availability;;;;; 0,1095 € ;€80,00 
+Paris - c6.16xlarge.2 (64 vCPU, 128GB RAM) in roadmap, controlled Availability;;;;; 0,1095 € ;€80,00 
+Paris - c6.large.4 (2 vCPU, 8GB RAM) in roadmap, controlled Availability;;;;; 0,0493 € ;€36,00 
+Paris - c6.xlarge.4 (4 vCPU, 16GB RAM) in roadmap, controlled Availability;;;;; 0,0493 € ;€36,00 
+Paris - c6.2xlarge.4 (8 vCPU, 32GB RAM) in roadmap, controlled Availability;;;;; 0,1095 € ;€80,00 
+Paris - c6.3xlarge.4 (12 vCPU, 48GB RAM) in roadmap, controlled Availability;;;;; 0,1095 € ;€80,00 
+Paris - c6.4xlarge.4 (16 vCPU, 64GB RAM) in roadmap, controlled Availability;;;;; 0,1095 € ;€80,00 
+Paris - c6.6xlarge.4 (24 vCPU, 96GB RAM) in roadmap, controlled Availability;;;;; 0,1095 € ;€80,00 
+Paris - c6.8xlarge.4 (32 vCPU, 128GB RAM) in roadmap, controlled Availability;;;;; 0,1095 € ;€80,00 
+Paris - c6.16xlarge.4 (64 vCPU, 256GB RAM) in roadmap, controlled Availability;;;;; 0,1095 € ;€80,00 
+Paris - hl2.8xlarge.8 (32vCPU, 256GB RAM);;;;; 0,1095 € ;€80,00 
+Paris - hl2.8xlarge.10 (32vCPU, 320GB RAM);;;;; 0,1095 € ;€80,00 
+Amsterdam - t2.micro (1 vCPU, 1GB RAM);;;;; 0,0493 € ;€36,00 
+Amsterdam - t2.small (1 vCPU, 2GB RAM);;;;; 0,0493 € ;€36,00 
+Amsterdam - s3.large.2 (2 vCPU, 4GB RAM) (Promotion until June 30th 2020);;;;; 0,0493 € ;€36,00 
+Amsterdam - s3.xlarge.2 (4 vCPU, 8GB RAM) (Promotion until June 30th 2020);;;;; 0,0493 € ;€36,00 
+Amsterdam - s3.2xlarge.2 (8 vCPU, 16GB RAM) (Promotion until June 30th 2020);;;;; 0,1095 € ;€80,00 
+Amsterdam - s3.4xlarge.2 (16 vCPU, 32GB RAM) (Promotion until June 30th 2020);;;;; 0,1095 € ;€80,00 
+Amsterdam - s3.large.4 (2 vCPU, 8GB RAM) (Promotion until June 30th 2020);;;;; 0,0493 € ;€36,00 
+Amsterdam - s3.xlarge.4 (4 vCPU, 16GB RAM) (Promotion until June 30th 2020);;;;; 0,0493 € ;€36,00 
+Amsterdam - s3.2xlarge.4 (8 vCPU, 32GB RAM) (Promotion until June 30th 2020);;;;; 0,1095 € ;€80,00 
+Amsterdam - s3.4xlarge.4 (16 vCPU, 64GB RAM) (Promotion until June 30th 2020);;;;; 0,1095 € ;€80,00 
+Amsterdam - m1.large (2 vCPU, 16GB RAM);;;;; 0,0493 € ;€36,00 
+Amsterdam - m1.xlarge (4 vCPU, 32GB RAM);;;;; 0,0493 € ;€36,00 
+Amsterdam - m1.2xlarge (8 vCPU, 64GB RAM);;;;; 0,1095 € ;€80,00 
+Amsterdam - m1.4xlarge (16 vCPU, 128GB RAM);;;;; 0,1095 € ;€80,00 
+Amsterdam - s1.medium (1 vCPU, 4GB RAM);;;;; 0,0493 € ;€36,00 
+Amsterdam - s1.large (2 vCPU, 8GB RAM);;;;; 0,0493 € ;€36,00 
+Amsterdam - s1.xlarge (4 vCPU, 16GB RAM);;;;; 0,0493 € ;€36,00 
+Amsterdam - s1.2xlarge (8 vCPU, 32GB RAM);;;;; 0,1095 € ;€80,00 
+Amsterdam - s1.4xlarge (16 vCPU, 64GB RAM);;;;; 0,1095 € ;€80,00 
+Amsterdam - s1.8xlarge (32 vCPU, 128GB RAM);;;;; 0,1095 € ;€80,00 
+Amsterdam - c1.large (2 vCPU, 2GB RAM);;;;; 0,0493 € ;€36,00 
+Amsterdam - c1.xlarge (4vCPU, 4GB RAM);;;;; 0,0493 € ;€36,00 
+Amsterdam - c1.2xlarge (8vCPU, 8GB RAM);;;;; 0,1095 € ;€80,00 
+Amsterdam - c1.4xlarge (16vCPU, 16GB RAM);;;;; 0,1095 € ;€80,00 
+Amsterdam - c2.large (2 vCPU, 4GB RAM);;;;; 0,0493 € ;€36,00 
+Amsterdam - c2.xlarge (4 vCPU, 8GB RAM);;;;; 0,0493 € ;€36,00 
+Amsterdam - c2.2xlarge (8 vCPU, 16GB RAM);;;;; 0,1095 € ;€80,00 
+Amsterdam - d1.xlarge (6 vCPU, 55GB RAM, 3*1.8TB);;;;; 0,1095 € ;€80,00 
+Amsterdam - d1.2xlarge (12 vCPU, 110GB RAM, 6*1.8TB);;;;; 0,1095 € ;€80,00 
+Amsterdam - d1.4xlarge (24 vCPU, 220GB RAM, 12*1.8TB);;;;; 0,1095 € ;€80,00 
+Amsterdam - d1.8xlarge (48 vCPU, 440GB RAM, 24*1.8TB);;;;; 0,1095 € ;€80,00 
+Amsterdam - d2.xlarge.8 (4 vCPU, 32GB RAM, 2*1.8TB);;;;; 0,0493 € ;€36,00 
+Amsterdam - d2.2xlarge.8 (8 vCPU, 64GB RAM, 4*1.8TB);;;;; 0,1095 € ;€80,00 
+Amsterdam - d2.4xlarge.8 (16 vCPU, 128GB RAM, 8*1.8TB);;;;; 0,1095 € ;€80,00 
+Amsterdam - d2.6xlarge.8 (24 vCPU, 192GB RAM, 12*1.8TB);;;;; 0,1095 € ;€80,00 
+Amsterdam - d2.8xlarge.8 (32 vCPU, 256GB RAM, 16*1.8TB);;;;; 0,1095 € ;€80,00 
+Amsterdam - d2.12xlarge.8 (48 vCPU, 384GB RAM, 24*1.8TB);;;;; 0,1095 € ;€80,00 
+Amsterdam - c3.large.2 (2 vCPU, 4GB RAM);;;;; 0,0493 € ;€36,00 
+Amsterdam - c3.xlarge.2 (4 vCPU, 8GB RAM);;;;; 0,0493 € ;€36,00 
+Amsterdam - c3.2xlarge.2 (8 vCPU, 16GB RAM);;;;; 0,1095 € ;€80,00 
+Amsterdam - c3.4xlarge.2 (16 vCPU, 32GB RAM);;;;; 0,1095 € ;€80,00 
+Amsterdam - c3.8xlarge.2 (32 vCPU, 64GB RAM);;;;; 0,1095 € ;€80,00 
+Amsterdam - c3.15xlarge.2 (60 vCPU, 128GB RAM);;;;; 0,1095 € ;€80,00 
+Amsterdam - cc3.large.4 (2 vCPU, 8GB RAM);;;;; 0,0493 € ;€36,00 
+Amsterdam - cc3.xlarge.4 (4 vCPU, 16GB RAM);;;;; 0,0493 € ;€36,00 
+Amsterdam - cc3.2xlarge.4 (8 vCPU, 32GB RAM);;;;; 0,1095 € ;€80,00 
+Amsterdam - cc3.4xlarge.4 (16 vCPU, 64GB RAM);;;;; 0,1095 € ;€80,00 
+Amsterdam - cc3.8xlarge.4 (32 vCPU, 128GB RAM);;;;; 0,1095 € ;€80,00 
+;;;;;;
+Paris - el2.6xlarge.8 (24vCPU, 384GB RAM);;;;; 0,1095 € ;€80,00 
+Paris - el2.12xlarge.4 (48vCPU, 768GB RAM);;;;; 0,1095 € ;€80,00 
+Paris - el2.24xlarge.2 (96vCPU, 1536GB RAM);;;;; 0,1095 € ;€80,00 
+Paris - el2.48xlarge.1 (192vCPU, 3072GB RAM);;;;; 0,1095 € ;€80,00 
+Paris - Hana 2TB (24vCPU, 288GB RAM);;;;; 0,1095 € ;€80,00 
+Paris - Hana 2TB (48vCPU, 576GB RAM);;;;; 0,1095 € ;€80,00 
+Paris - Hana 2TB (96vCPU, 1024GB RAM);;;;; 0,1095 € ;€80,00 
+Paris - Hana 2TB (192vCPU, 2048GB RAM);;;;; 0,1095 € ;€80,00 
+;;;;;;
+Licence OS Bare Metal ;Facturé à la granularité au mois;;;;;
+OS;;;;;;"€/mois en sus des Prix Linux
+[18bis]"
+Oracle Linux;;;;;; -   € 
+Red Hat Enterprise;;;;;; 86,00 € 
+Windows Server;;;;;; 60,00 € 
+SUSE Enterprise;;;;;; 86,00 € 

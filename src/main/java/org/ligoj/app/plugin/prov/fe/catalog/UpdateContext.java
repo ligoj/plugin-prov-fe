@@ -3,10 +3,12 @@
  */
 package org.ligoj.app.plugin.prov.fe.catalog;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import org.ligoj.app.plugin.prov.catalog.AbstractUpdateContext;
+import org.ligoj.app.plugin.prov.model.VmOs;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -39,5 +41,7 @@ public class UpdateContext extends AbstractUpdateContext {
 	 * All CSV costs.
 	 */
 	private Map<String, Map<String, List<CsvPrice>>> csvPrices;
+
+	private Map<String, Map<String,Map<VmOs, Map<String,CsvOsPrice>>>> osPrices;
 
 }

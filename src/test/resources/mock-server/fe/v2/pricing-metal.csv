@@ -1,0 +1,5 @@
+type;cpu_name ;;ram;Description;;monthlyCost;Region
+physical.o2.medium;Intel Xeon E5-2667 v4 (3.2GHz/8-core/25MB/135W) Processor*2;;256GB;2x 800GB SAS + 1,6 TB SSD NVMe;; $1_534 ;Singapore
+;Intel Xeon E5-2667 v4 (3.2GHz/8-core/25MB/135W) Processor*2;;256GB;2x 800GB SAS + 1,6 TB SSD NVMe;;;
+physical.o2.medium;Intel Xeon E5-2667 v4 (3.2GHz/8-core/25MB/135W) Processor*2;;256GB;2x 800GB SAS + 1,6 TB SSD NVMe;; 1_273 Û ;Paris
+physical.o2.medium;Intel Xeon E5-2667 v4 (3.2GHz/8-core/25MB/135W) Processor*2;;256GB;2x 800GB SAS + 1,6 TB SSD NVMe;; 1_273 Û ;Amsterdam

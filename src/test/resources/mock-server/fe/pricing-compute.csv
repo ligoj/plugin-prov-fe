@@ -1,0 +1,94 @@
+﻿ECS - Orange Business Services Compute LINUX FREE ;Facturé à la granularité de la seconde;;;;;;Instance réservée facturée à la granularité du mois;;;;;;;;;;;;
+Produit;vCPU;RAM (GB);Disque système sur EVS (Go) [non inclus dans le prix];Disque Data ;"€/Heure 
+[4][5]";"€/mois 
+base mensuelle [18]";"Instance réservée 1 an sans frais initiaux
+€ / mois";"Instance réservée 1 an  frais initiaux
+FAS";"Instance réservée 1 an avec frais initiaux
+€ / mois";"Instance réservée 1 an avec frais initiaux
+€ / mois [1]";"Instance réservée 2 ans  frais initiaux
+FAS";"Instance réservée 2 ans avec frais initiaux
+€ / mois";"Instance réservée 2 ans avec frais initiaux
+€ / mois  [1]";Instance réservée 3 ans sans frais initiaux  [41]€     / mois;"Instance réservée 3 ans  frais initiaux
+FAS";"Instance réservée 3 ans avec frais initiaux
+€ / mois";"Instance réservée 3 ans avec frais initiaux
+€ / mois  [1]";Instance réservée 5 ans sans frais initiaux  [41]€     / mois;"reserved instance convertible 3 years without upfront
+$ / month (Managed Applications Only)"
+Paris - t2.micro (1 vCPU, 1GB RAM);1;1;EVS;EVS;0,0103;6,695;5,34;30,23;2,52;5,04;51,36;2,41;4,55;3,83;63,61;1,77;3,53;3,08;
+Paris - p2.2xlarge.8  (GPU, 8vCPU, 64GB RAM, 1*800GB);8;64;EVS;1*800Go (local SSD);3,326;2161,9;1651,02;9469,15;789,09;1578,19;13475,32;713,22;1274,69;1068,31;17481,5;485,59;971,19;825,51;
+Amsterdam - t2.micro (1 vCPU, 1GB RAM);1;1;EVS;EVS;0,0103;6,695;6,15;33,21;2,76;5,53;51,36;2,41;4,55;4,03;69,51;1,65;3,58;7,51;
+Amsterdam - g3.4xlarge.4 (8GPU, 16vCPU, 64 GB RAM);16;64;EVS;EVS;1,1547;750,56;590,05;3034,55;252,88;505,76;4779,42;234,97;434,11;396,18;6524,29;181,23;362,46;842,93;
+;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;
+Flexible Elastic Cloud Server -  Compute [5];;;Facturé à la granularité de la minute;;;;Instance réservée flexible facturée à la granularité du mois;;;;;;;;;;;;
+Produit;vCPU;RAM (Go);Disque système sur EVS (Go) [non inclus dans le prix];Disque Data;"€/Heure 
+[4][5]";"€/mois 
+base mensuelle [18]";"Instance réservée flexible 1 an sans frais initiaux
+€ / mois";Instance réservée flexible 1 an  frais initiaux;"Instance réservée flexible 1 an avec frais initiaux
+€ / mois";"Equivalent par mois Instance réservée flexible 1 an avec frais initiaux
+€ / mois [2]";Instance réservée flexible 2 ans  frais initiaux;"Instance réservée flexible 2 ans avec frais initiaux
+€ / mois";"Equivalent par mois Instance réservée flexible 2 ans avec frais initiaux
+€ / mois  [2]";"Instance réservée flexible 3 ans sans frais initiaux
+€ / mois  [2] (pour les tenants managés uniquement)";Instance réservée flexible 3 ans  frais initiaux;"Instance réservée flexible 3 ans avec frais initiaux
+€ / mois";"Equivalent par mois Instance réservée flexible 3 ans avec frais initiaux
+€ / mois  [2]";;
+Paris - t2.micro (1 vCPU, 1GB RAM);1;1;EVS;EVS;0,0103;6,7;6,02;34,29;2,86;5,71;53,69;2,44;4,89;4,36;73,08;2,03;4,06;;
+Paris -c6.large.2 (2 vCPU, 4GB RAM);2;4;EVS;EVS;0,1;62,29;55,25;314,7;26,23;52,45;478,35;22,03;44,06;34,28;566,64;15,74;31,48;;
+Paris - p2.2xlarge.8  (GPU, 8vCPU, 64GB RAM, 1*800GB);8;64;EVS;EVS;3,33;2161,9;1893,82;10925,91;910,49;1820,99;15733,31;740,53;1481,07;1238,27;20540,71;570,58;1141,15;;
+Amsterdam - t2.micro (1 vCPU, 1GB RAM);1;1;EVS;EVS;0,0103;6,7;6,02;34,29;2,86;5,71;53,69;2,44;4,89;4,36;73,08;2,03;4,06;;
+;;;;;;;;;;;;;;;;;;;
+ECS - Orange Business Services Compute LINUX FREE;Facturé à la granularité de la seconde;;;;;;Instance réservée facturée à la granularité du mois;;;;;;;;;;;;
+Produit;vCPU;RAM (GB);Disque système sur EVS (Go) [non inclus dans le prix];Disque Data sur EVS (Go);"$/Heure 
+[4][5]";"$/mois 
+base mensuelle [18]";"Instance réservée 1 an sans frais initiaux
+$ / mois";"Instance réservée 1 an  frais initiaux
+FAS";"Instance réservée 1 an avec frais initiaux
+$ / mois";"Instance réservée 1 an avec frais initiaux
+$ / mois [1]";"Instance réservée 2 ans  frais initiaux
+FAS";"Instance réservée 2 ans avec frais initiaux
+$ / mois";"Instance réservée 2 ans avec frais initiaux
+$ / mois  [1]";"Instance réservée 3 ans sans frais initiaux
+$ / mois [34]";"Instance réservée 3 ans  frais initiaux
+FAS";"Instance réservée 3 ans avec frais initiaux
+$ / mois";"Instance réservée 3 ans avec frais initiaux
+$ / mois  [1]";"Instance réservée 5 ans sans frais initiaux
+$ / mois [34]";
+Atlanta - t2.micro (1 vCPU, 1GB RAM);1;1;EVS;EVS;0,0124;8,544;7,38;39,852;3,312;6,636;61,632;2,892;5,46;4,87;77,328;2,148;4,296;3,89;
+Atlanta - g1.xlarge (GPU, 4vCPU, 8GB RAM);4;8;EVS;EVS;0,4101;253,32;199,15;1024,21;85,34;170,7;1613,13;79,29;146,52;214,15;2201,9;61,16;122,32;101,78;
+;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;
+Flexible ECS - Orange Business Services Compute LINUX FREE;Facturé à la granularité de la seconde;;;;;;Instance réservée facturée à la granularité du mois;;;;;;;;;;;;
+Produit;vCPU;RAM (GB);Disque système sur EVS (Go) [non inclus dans le prix];Disque Data sur EVS (Go);"$/Heure 
+[4][5]";"$/mois 
+base mensuelle [18]";"Instance réservée 1 an sans frais initiaux
+$ / mois";"Instance réservée 1 an  frais initiaux
+FAS";"Instance réservée 1 an avec frais initiaux
+$ / mois";"Instance réservée 1 an avec frais initiaux
+$ / mois [1]";"Instance réservée 2 ans  frais initiaux
+FAS";"Instance réservée 2 ans avec frais initiaux
+$ / mois";"Instance réservée 2 ans avec frais initiaux
+$ / mois  [1]";"Instance réservée 3 ans sans frais initiaux
+$ / mois [34]";"Instance réservée 3 ans  frais initiaux
+FAS";"Instance réservée 3 ans avec frais initiaux
+$ / mois";"Instance réservée 3 ans avec frais initiaux
+$ / mois  [1]";"Instance réservée 5 ans sans frais initiaux
+$ / mois [34]";
+Atlanta - t2.micro (1 vCPU, 1GB RAM);1;1;EVS;EVS;0,0124;8,54;7,88;45,08;3,76;7,51;57,57;2,85;5,91;3,62;70,06;1,95;3,89;;
+Atlanta - g1.xlarge (GPU, 4vCPU, 8GB RAM);4;8;EVS;EVS;0,4101;253,32;230,52;1203,48;100,29;200,58;2002,81;89,06;100,29;146,69;2802,13;77,84;155,67;;
+;;;;;;;;;;;;;;;;;;;
+ECS - Orange Business Services Compute LINUX FREE;Billed at the second granularity;;;;;;Reserved instances billed at the month granularity;;;;;;;;;;;;
+Product;vCPU;RAM (GB);System disk on EVS (Go) [not included in price];Data disk on EVS (Go);USD/hour;"USD/month 
+Monthly base [18]";"reserved instance 1 year without setup fee
+$ / month";"reserved instance 1 year - Setup fee
+FAS";"reserved instance 1 year with setup fee
+$ / month";"reserved instance  1 year with setup fee
+$ / month [1]";"reserved instance 2 years with setup fee
+FAS";"reserved instance 2 years - Setup fee
+$ / hour";"reserved instance 2 years with setup fee
+$ / month  [1]";"reserved instance 3 years without setup fee
+$ / month (Managed Applications Only) [40]";"reserved instance 3 years - Setup fee
+FAS";"reserved instance 3 years with setup fee
+$ / hour";"reserved instance 3 years with setup fee
+$ / month  [1]";;"reserved instance convertible 3 years without upfront
+$ / month (Managed Applications Only)"
+Singapore - t2.micro (1 vCPU, 1GB RAM);1;1;EVS;EVS;0,0145;9,43;6,56;35,36;3,19;6,14;53,35;2,91;5,13;4,48;71,33;2,15;4,13;;5,157405
+Singapore - d2.2xlarge.8 (8 vCPU, 64GB RAM, 4*1.8TB);8;64;EVS;4*1.8T;;;;;;;;;;;;;;;

@@ -1,0 +1,46 @@
+﻿Licence WINDOWS Server OS image 2008, 2012, 2016  (compute exclus) [17];Facturé à la granularité de l'heure;;[5bis] [18bis];;;
+Produit;;;;;"€/Heure en sus des Prix Linux
+[5][5bis]";"€/mois en sus des Prix Linux
+[18bis]"
+Paris - p2.2xlarge.8  (GPU, 8vCPU, 64GB RAM, 1*800GB);;;;;0,27 € ;€ 200,00
+Paris -c6.large.2 (2 vCPU, 4GB RAM) in roadmap, controlled Availability;;;;;0,07 € ;€ 50,00
+Amsterdam - g3.4xlarge.4 (8GPU, 16vCPU, 64 GB RAM);;;;;0,55 € ;€ 400,00
+;;;;;;
+Licence SUSE Enterprise Linux Server for SAP Applications (compute exclus) [5bis];;;Facturé à la granularité de l'heure;;[5bis] [18bis];
+Produit;;;;;"€/Heure en sus des Prix Linux
+[5][5bis]";"€/mois en sus des Prix Linux
+[18bis]"
+Paris roadmap - e1.4xlarge (16 vCPU, 470GB RAM);;;;;0,39 € ;€ 272,09
+;;;;;;
+Licence SUSE Entreprise Linux SLES Basic (compute exclus);Facturé à la granularité de l'heure;;[5bis] [18bis];;;
+Produit;;;;;"€/Heure en sus des Prix Linux
+[5][5bis]";"€/mois en sus des Prix Linux
+[18bis]"
+Paris - t2.micro (1 vCPU, 1GB RAM);;;;;0,05 € ;€ 39,00
+Paris -c6.large.2 (2 vCPU, 4GB RAM) in roadmap, controlled Availability;;;;;0,05 € ;€ 39,00
+Paris - c6.xlarge.2 (4 vCPU, 8GB RAM) in roadmap, controlled Availability;;;;;0,10 € ;€ 71,00
+Amsterdam - t2.micro (1 vCPU, 1GB RAM);;;;;0,05 € ;€ 39,00
+;;;;;;
+Licence SUSE Entreprise Linux SLES pour SAP (compute exclus);Facturé à la granularité de l'heure;;[5bis] [18bis];;;
+Produit;;;;;"€/Heure en sus des Prix Linux
+[5][5bis]";"€/mois en sus des Prix Linux
+[18bis]"
+Paris - t2.micro (1 vCPU, 1GB RAM);;;;;0,14 € ;€ 104,00
+Paris -c6.large.2 (2 vCPU, 4GB RAM) in roadmap, controlled Availability;;;;;0,14 € ;€ 104,00
+Amsterdam - t2.micro (1 vCPU, 1GB RAM);;;;;0,14 € ;€ 104,00
+;;;;;;
+;;;;;;
+Licence RedHat OS image (compute exclus);Facturé à la granularité de l'heure;;[5bis] [18bis];;;
+Produit;;;;;"€/Heure en sus des Prix Linux
+[5][5bis]";"€/mois en sus des Prix Linux
+[18bis]"
+Paris - t2.micro (1 vCPU, 1GB RAM);;;;;0,05 € ;€ 36,00
+Paris -c6.large.2 (2 vCPU, 4GB RAM) in roadmap, controlled Availability;;;;;0,05 € ;€ 36,00
+Amsterdam - t2.micro (1 vCPU, 1GB RAM);;;;;0,05 € ;€ 36,00
+;;;;;;
+;;;;;;
+;;;;;;
+;;;;;;
+;;;;;;
+;;;;;;
+;;;;;;

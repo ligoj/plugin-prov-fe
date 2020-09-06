@@ -1,27 +1,54 @@
 {
-    "On-demand": {
-        "billingPeriod": "hourly",
-        "period": 0,
-        "rate": 1
+    "on-demand": {
+        "name": "On-Demand",
+        "period": 0
     },
-    "RI - 1 M": {
-    	"billingPeriod": "monthly",
-        "period": 1,
-        "rate": 0.7
+    "on-demand-1m": {
+        "name": "1m",
+        "period": 1
     },
-    "RI - 1 Y": {
-   		"billingPeriod": "yearly",
-        "period": 12,
-        "rate": 0.6
+    "ri-1y": {
+    	"name": "Reserved, 1yr",
+        "period": 12
     },
-    "RI - 2 Y": {
-    	"billingPeriod": "yearly",
-        "period": 24,
-        "rate": 0.5
+    "ri-3y": {
+    	"name": "Reserved, 3yr",
+        "period": 36
     },
-    "RI - 3 Y": {
-    	"billingPeriod": "yearly",
-        "period": 36,
-        "rate": 0.4
+    "ri-5y": {
+    	"name": "Reserved, 5yr",
+        "period": 60
+    },
+    "ri-1y-upfront": {
+    	"name": "Reserved, 1yr, Partial Upfront",
+        "period": 12
+    },
+    "ri-2y-upfront": {
+   		"name": "Reserved, 2yr, Partial Upfront",
+        "period": 24
+    },
+    "ri-3y-upfront": {
+    	"name": "Reserved, 3yr, Partial Upfront",
+        "period": 36
+    },
+    "ri-1y-convertible": {
+    	"name": "Reserved, 1yr, convertible",
+        "period": 12
+    },
+    "ri-1y-upfront-convertible": {
+    	"name": "Reserved, 1yr, Partial Upfront, convertible",
+        "period": 12
+    },
+    "ri-2y-upfront-convertible": {
+   		"name": "Reserved, 2yr, Partial Upfront, convertible",
+        "period": 24
+    },
+    "ri-3y-convertible": {
+    	"name": "Reserved, 3yr, convertible",
+        "period": 36
+    },
+    "ri-3y-upfront-convertible": {
+    	"name": "Reserved, 3yr, Partial Upfront, convertible",
+        "period": 36
     }
 }
