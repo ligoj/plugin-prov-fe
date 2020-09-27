@@ -1,4 +1,5 @@
-﻿Licence WINDOWS Server OS image 2008, 2012, 2016  (compute exclus) [17];Facturé à la granularité de l'heure;;[5bis] [18bis];;;
+﻿product;;;;;cost_h;cost_m
+Licence WINDOWS Server OS image 2008, 2012, 2016  (compute exclus) [17];Facturé à la granularité de l'heure;;[5bis] [18bis];;;
 Produit;;;;;"€/Heure en sus des Prix Linux
 [5][5bis]";"€/mois en sus des Prix Linux
 [18bis]"
@@ -37,10 +38,3 @@ Produit;;;;;"€/Heure en sus des Prix Linux
 Paris - t2.micro (1 vCPU, 1GB RAM);;;;;0,05 € ;€ 36,00
 Paris -c6.large.2 (2 vCPU, 4GB RAM) in roadmap, controlled Availability;;;;;0,05 € ;€ 36,00
 Amsterdam - t2.micro (1 vCPU, 1GB RAM);;;;;0,05 € ;€ 36,00
-;;;;;;
-;;;;;;
-;;;;;;
-;;;;;;
-;;;;;;
-;;;;;;
-;;;;;;

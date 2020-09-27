@@ -7,8 +7,7 @@
         "placement": "central",
         "subRegion": "Paris",
         "latitude": 48.8188484,
-        "longitude": 2.1583486,
-        "name": "EUROPE"
+        "longitude": 2.1583486
     },
     "eu-west-1": {
        "continentM49": 150,
@@ -28,6 +27,6 @@
         "placement": "east",
         "subRegion": "Atlanta",
         "latitude": 33.75570800000001,
-        "longitude": -84.388368,
+        "longitude": -84.388368
     }
 }

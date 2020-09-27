@@ -80,7 +80,7 @@ public class FePriceImport extends AbstractImportCatalogResource {
 	/**
 	 * Pattern of the production for compute and OS. Sample <code>Paris - t2.micro (1 vCPU, 1GB RAM)</code>
 	 */
-	private static final Pattern PRODUCT_PATTERN = Pattern.compile("^\\s*([^\\s]+\\s*-\\s*([^\\s]+)\\s*\\(.*$");
+	private static final Pattern PRODUCT_PATTERN = Pattern.compile("^\\s*([^\\s]+)\\s*-\\s*([^\\s]+)\\s*\\(.*$");
 	/**
 	 * Default pricing URL.
 	 */
@@ -268,7 +268,7 @@ public class FePriceImport extends AbstractImportCatalogResource {
 			}
 		} finally {
 			// Report
-			log.info("Fe OS import finished: {} prices ({})", context.getPrices().size(),
+			log.info("FE OS import finished: {} prices ({})", context.getPrices().size(),
 					String.format("%+d", context.getPrices().size()));
 		}
 	}
@@ -296,7 +296,7 @@ public class FePriceImport extends AbstractImportCatalogResource {
 			}
 		} finally {
 			// Report
-			log.info("Fe OnDemand/Reserved import finished: {} prices ({})", context.getPrices().size(),
+			log.info("FE OnDemand/Reserved import finished: {} prices ({})", context.getPrices().size(),
 					String.format("%+d", context.getPrices().size()));
 		}
 	}

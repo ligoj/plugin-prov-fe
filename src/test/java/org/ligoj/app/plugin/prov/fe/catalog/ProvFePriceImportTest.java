@@ -254,12 +254,18 @@ class ProvFePriceImportTest extends AbstractServerTest {
 
 	private void mockServer() throws IOException {
 		configuration.put(FePriceImport.CONF_API_PRICES, "http://localhost:" + MOCK_PORT);
-		httpServer.stubFor(get(urlEqualTo("/prices/pricing.csv"))
+		httpServer.stubFor(get(urlEqualTo("/prices/pricing-compute.csv"))
+				.willReturn(aResponse().withStatus(HttpStatus.SC_OK).withBody(IOUtils.toString(
+						new ClassPathResource("mock-server/fe/pricing-compute.csv").getInputStream(), "UTF-8"))));
+		httpServer.stubFor(get(urlEqualTo("/prices/pricing-os.csv"))
 				.willReturn(aResponse().withStatus(HttpStatus.SC_OK).withBody(IOUtils
-						.toString(new ClassPathResource("mock-server/fe/pricing.csv").getInputStream(), "UTF-8"))));
-		httpServer.stubFor(get(urlEqualTo("/v2/prices/pricing.csv"))
-				.willReturn(aResponse().withStatus(HttpStatus.SC_OK).withBody(IOUtils
-						.toString(new ClassPathResource("mock-server/fe/v2/pricing.csv").getInputStream(), "UTF-8"))));
+						.toString(new ClassPathResource("mock-server/fe/pricing-os.csv").getInputStream(), "UTF-8"))));
+		httpServer.stubFor(get(urlEqualTo("/v2/prices/pricing-compute.csv"))
+				.willReturn(aResponse().withStatus(HttpStatus.SC_OK).withBody(IOUtils.toString(
+						new ClassPathResource("mock-server/fe/v2/pricing-compute.csv").getInputStream(), "UTF-8"))));
+		httpServer.stubFor(get(urlEqualTo("/v2/prices/pricing-os.csv"))
+				.willReturn(aResponse().withStatus(HttpStatus.SC_OK).withBody(IOUtils.toString(
+						new ClassPathResource("mock-server/fe/v2/pricing-os.csv").getInputStream(), "UTF-8"))));
 		httpServer.start();
 	}
 
@@ -331,8 +337,9 @@ class ProvFePriceImportTest extends AbstractServerTest {
 	@Test
 	void installOnLine() throws Exception {
 		configuration.delete(FePriceImport.CONF_API_PRICES);
-		configuration.put(FePriceImport.CONF_ITYPE, ".*(v5).*");
+		configuration.put(FePriceImport.CONF_ITYPE, "(t2|g1|p2).*");
 		configuration.put(FePriceImport.CONF_OS, "(WINDOWS|LINUX)");
+		configuration.put(FePriceImport.CONF_REGIONS, "(Paris|Atlanta)");
 		installAndConfigure(true);
 	}
 
@@ -340,7 +347,6 @@ class ProvFePriceImportTest extends AbstractServerTest {
 	 * Install and check
 	 */
 	private QuoteVo installAndConfigure(final boolean online) throws IOException, Exception {
-		configuration.put(FePriceImport.CONF_REGIONS, "(eu-.*|cloudgouv.*|cn-.*)");
 		resource.install(false);
 		em.flush();
 		em.clear();
