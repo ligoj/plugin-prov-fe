@@ -18,6 +18,8 @@ import java.util.function.Function;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
+import org.apache.commons.io.input.BOMInputStream;
+import org.apache.commons.lang3.ObjectUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.ligoj.app.plugin.prov.catalog.AbstractImportCatalogResource;
 import org.ligoj.app.plugin.prov.fe.ProvFePluginResource;
@@ -237,7 +239,8 @@ public class FePriceImport extends AbstractImportCatalogResource {
 		context.setOsPrices(result);
 
 		// Get the remote prices stream
-		try (var reader = new BufferedReader(new InputStreamReader(new URI(endpoint).toURL().openStream()))) {
+		try (var reader = new BufferedReader(
+				new InputStreamReader(new BOMInputStream(new URI(endpoint).toURL().openStream())))) {
 			// Pipe to the CSV reader
 			final var csvReader = new CsvOsForBeanFe(reader);
 
@@ -282,7 +285,8 @@ public class FePriceImport extends AbstractImportCatalogResource {
 		log.info("FE OnDemand/Reserved import started@{} ...", endpoint);
 
 		// Get the remote prices stream
-		try (var reader = new BufferedReader(new InputStreamReader(new URI(endpoint).toURL().openStream()))) {
+		try (var reader = new BufferedReader(
+				new InputStreamReader(new BOMInputStream(new URI(endpoint).toURL().openStream())))) {
 			// Pipe to the CSV reader
 			final var csvReader = new CsvForBeanFe(reader);
 
@@ -328,41 +332,48 @@ public class FePriceImport extends AbstractImportCatalogResource {
 
 		if (price.isConvertible()) {
 			// Convertible mode
-			installInstancePrice(context, location, "ri-1y-convertible", type, price.getCost1yPerMonth(), 0d);
-			installInstancePrice(context, location, "ri-1y-upfront-convertible", type, price.getCost1yUFPerMonth(),
+			installInstancePrice(context, location, "ri-1y-convertible", type, 1, price.getCost1yPerMonth(), 0d);
+			installInstancePrice(context, location, "ri-1y-upfront-convertible", type, 1, price.getCost1yUFPerMonth(),
 					price.getCost1yUFFee());
-			installInstancePrice(context, location, "ri-2y-upfront-convertible", type, price.getCost2yUFPerMonth(),
+			installInstancePrice(context, location, "ri-2y-upfront-convertible", type, 1, price.getCost2yUFPerMonth(),
 					price.getCost2yUFFee());
-			installInstancePrice(context, location, "ri-3y-convertible", type, price.getCost3yPerMonth(), 0d);
-			installInstancePrice(context, location, "ri-3y-upfront-convertible", type, price.getCost3yUFPerMonth(),
+			installInstancePrice(context, location, "ri-3y-convertible", type, 1, price.getCost3yPerMonth(), 0d);
+			installInstancePrice(context, location, "ri-3y-upfront-convertible", type, 1, price.getCost3yUFPerMonth(),
 					price.getCost3yUFFee());
 		} else {
 			// Standard, non convertible price entry
-			installInstancePrice(context, location, "on-demand", type, context.getHoursMonth() * price.getCost1h(), 0d);
-			installInstancePrice(context, location, "on-demand-1m", type, price.getCost1m(), 0d);
-			installInstancePrice(context, location, "ri-1y", type, context.getHoursMonth() * price.getCost1yPerMonth(),
+			installInstancePrice(context, location, "on-demand", type, context.getHoursMonth(), price.getCost1h(), 0d);
+			installInstancePrice(context, location, "on-demand-1m", type, 1, price.getCost1m(), 0d);
+			installInstancePrice(context, location, "ri-1y", type, context.getHoursMonth(), price.getCost1yPerMonth(),
 					0d);
-			installInstancePrice(context, location, "ri-3y", type, context.getHoursMonth() * price.getCost3yPerMonth(),
+			installInstancePrice(context, location, "ri-3y", type, context.getHoursMonth(), price.getCost3yPerMonth(),
 					0d);
-			installInstancePrice(context, location, "ri-5y", type, context.getHoursMonth() * price.getCost5yPerMonth(),
+			installInstancePrice(context, location, "ri-5y", type, context.getHoursMonth(), price.getCost5yPerMonth(),
 					0d);
-			installInstancePrice(context, location, "ri-1y-upfront", type,
-					context.getHoursMonth() * price.getCost1yUFPerMonth(), price.getCost1yUFPerMonth());
-			installInstancePrice(context, location, "ri-2y-upfront", type, context.getHoursMonth() * price.getCost1h(),
+			installInstancePrice(context, location, "ri-1y-upfront", type, context.getHoursMonth(),
+					price.getCost1yUFPerMonth(), price.getCost1yUFPerMonth());
+			installInstancePrice(context, location, "ri-2y-upfront", type, context.getHoursMonth(), price.getCost1h(),
 					price.getCost2yUFPerMonth());
-			installInstancePrice(context, location, "ri-3y-upfront", type, context.getHoursMonth() * price.getCost1h(),
+			installInstancePrice(context, location, "ri-3y-upfront", type, context.getHoursMonth(), price.getCost1h(),
 					price.getCost3yUFPerMonth());
 		}
 
 		// Handle extra CSV column for convertible 3y
 		if (price.getCost3yPerMonthConvertible() != null) {
-			installInstancePrice(context, location, "ri-3y-convertible", type, price.getCost3yPerMonthConvertible(),
+			installInstancePrice(context, location, "ri-3y-convertible", type, 1, price.getCost3yPerMonthConvertible(),
 					0d);
 		}
 	}
 
 	private void installInstancePrice(final UpdateContext context, final ProvLocation region, final String termCode,
-			final ProvInstanceType type, final double monthlyCost, final Double initialCost) {
+			final ProvInstanceType type, final double coeff, final Double monthlyCostNoCoeff,
+			final Double initialCost) {
+
+		if (monthlyCostNoCoeff == null) {
+			// Ignore this null price (not 0)
+			return;
+		}
+		final var monthlyCost = coeff * monthlyCostNoCoeff;
 		final var term = installPriceTerm(context, context.getCsvTerms().get(termCode));
 
 		// Get the OS/Software price from : location , type, OS, software
@@ -427,7 +438,8 @@ public class FePriceImport extends AbstractImportCatalogResource {
 		saveAsNeeded(context, price, price.getCost(), monthlyCost, (cR, c) -> {
 			price.setInitialCost(initialCost);
 			price.setCost(cR);
-			price.setCostPeriod(round3Decimals(price.getInitialCost() + c * price.getTerm().getPeriod()));
+			price.setCostPeriod(round3Decimals(
+					ObjectUtils.defaultIfNull(price.getInitialCost(), 0d) + c * price.getTerm().getPeriod()));
 		}, ipRepository::save);
 
 	}

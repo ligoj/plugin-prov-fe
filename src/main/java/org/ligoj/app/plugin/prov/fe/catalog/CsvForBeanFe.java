@@ -11,6 +11,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.math.NumberUtils;
 import org.ligoj.bootstrap.core.csv.AbstractCsvManager;
 import org.ligoj.bootstrap.core.csv.CsvBeanReader;
 import org.ligoj.bootstrap.core.csv.CsvReader;
@@ -44,6 +45,7 @@ public class CsvForBeanFe extends AbstractCsvManager {
 		HEADERS_MAPPING.put("cost_m_2y_upfront", "cost2yUFPerMonth");
 		HEADERS_MAPPING.put("cost_m_3y_no_upfront", "cost3yPerMonth");
 		HEADERS_MAPPING.put("cost_3y_upfront_fees", "cost3yUFFee");
+		HEADERS_MAPPING.put("cost_m_3y_upfront", "cost3yUFPerMonth");
 		HEADERS_MAPPING.put("cost_m_5y_no_upfront", "cost5yPerMonth");
 		HEADERS_MAPPING.put("cost_m_3y_convertible", "cost3yPerMonthConvertible");
 
@@ -94,20 +96,22 @@ public class CsvForBeanFe extends AbstractCsvManager {
 				return false;
 			}
 		}
-		return rawValues.size() > 7;
+		return rawValues.size() >= 19 && NumberUtils.isDigits(rawValues.get(1));
 	}
 
 	/**
 	 * Return a list of JPA bean re ad from the given CSV input. Headers are expected.
 	 *
-	 * @return The bean read from the next CSV record.
+	 * @return The bean read from the next CSV record. Return <code>null</code> when the EOF is reached.
 	 * @throws IOException When the CSV record cannot be read.
 	 */
 	public CsvPrice read() throws IOException {
 		final var entry = beanReader.read();
 
 		// Forward the convertible mode to this new CSV entry
-		entry.setConvertible(convertible);
+		if (entry != null) {
+			entry.setConvertible(convertible);
+		}
 		return entry;
 	}
 }

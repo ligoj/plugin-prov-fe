@@ -1,3 +1,4 @@
+product;cpu;ram (GB);disk;size;cost_h;cost_m;cost_m_1y_no_upfront;cost_1y_upfront_fees;cost_m_1y_upfront;cost_m_1y_upfront_equiv;cost_2y_upfront_fees;cost_m_2y_upfront;cost_m_2y_upfront_equiv;cost_m_3y_no_upfront;cost_3y_upfront_fees;cost_m_3y_upfront;cost_m_3y_no_upfront_equiv;cost_m_5y_no_upfront;cost_m_3y_convertible
 ﻿ECS - Orange Business Services Compute LINUX FREE ;Facturé à la granularité de la seconde;;;;;;Instance réservée facturée à la granularité du mois;;;;;;;;;;;;
 Produit;vCPU;RAM (GB);Disque système sur EVS (Go) [non inclus dans le prix];Disque Data ;"€/Heure 
 [4][5]";"€/mois 

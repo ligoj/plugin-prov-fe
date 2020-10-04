@@ -112,7 +112,7 @@ public class CsvOsForBeanFe extends AbstractCsvManager {
 				return false;
 			}
 		}
-		return rawValues.size() >= 7;
+		return rawValues.size() >= 7 && !rawValues.get(0).isBlank();
 	}
 
 	/**

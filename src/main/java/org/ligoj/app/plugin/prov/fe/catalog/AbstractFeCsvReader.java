@@ -52,6 +52,9 @@ public abstract class AbstractFeCsvReader<T> extends CsvBeanReader<T> {
 			if ("?".equals(rawValues.get(i))) {
 				rawValues.set(i, "");
 			}
+			
+			// Remove the optional "€" currency char
+			rawValues.set(i, rawValues.get(i).replace("€", ""));
 		}
 		if (isValidRaw(rawValues)) {
 			return build(rawValues, null);
