@@ -46,7 +46,7 @@ import lombok.extern.slf4j.Slf4j;
 /**
  * The provisioning price service for Digital Ocean. Manage install or update of prices.<br>
  * Note about RI: Subscribing to a Reserved Instance is a pricing option and does not guarantee resource availability.
- * If your target flavour is not already in use, it is recommended to check the availability on the Console.
+ * If your target flavor is not already in use, it is recommended to check the availability on the Console.
  * 
  * 
  * 
@@ -61,6 +61,14 @@ import lombok.extern.slf4j.Slf4j;
  * @see <a href=
  *      "https://cloud.orange-business.com/offres/infrastructure-iaas/flexible-engine/fonctionnalites/elastic-cloud-server/">Instance
  *      types</a>
+ * 
+ * @see <a href=
+ *      "https://cloud.orange-business.com/wp-content/uploads/2019/03/Flexible-Engine-Service-Description_280619.pdf">Service
+ *      Description</a>
+ * @see <a href=
+ *      "https://cloud.orange-business.com/wp-content/uploads/2019/11/flexible_engine-service_description.pdf">Service
+ *      Description (new)</a>
+ * 
  */
 @Component
 @Setter
@@ -163,6 +171,9 @@ public class FePriceImport extends AbstractImportCatalogResource {
 			term.setEntity(installPriceTerm(context, term));
 		});
 		context.setCsvTerms(terms);
+
+		// Complete location description from "subRegion"
+		context.getMapRegionToName().values().forEach(r -> r.setDescription(r.getSubRegion()));
 
 		// Fetch the remote prices stream and build the price objects
 		// Instances
@@ -311,6 +322,15 @@ public class FePriceImport extends AbstractImportCatalogResource {
 	}
 
 	/**
+	 * Return the location from its human readable name like <code>eu-west-0</code/>.
+	 */
+	private String getLocationFromName(final UpdateContext context, final String humanName) {
+		return context.getMapRegionToName().entrySet().stream()
+				.filter(r -> humanName.equalsIgnoreCase(r.getValue().getSubRegion())).map(r -> r.getKey()).findFirst()
+				.orElse(humanName);
+	}
+
+	/**
 	 * Install all instance price as needed. Each CSV entry contains several term prices.
 	 */
 	private void installInstancePrices(final UpdateContext context, final CsvPrice price) {
@@ -321,8 +341,8 @@ public class FePriceImport extends AbstractImportCatalogResource {
 		}
 
 		// Install location
-		final var locationName = matcher.group(1);
-		final var location = installRegion(context, locationName);
+		final var humanName = matcher.group(1);
+		final var location = installRegion(context, getLocationFromName(context, humanName));
 		if (location == null) {
 			// Unsupported region, or invalid row -> ignore
 			return;

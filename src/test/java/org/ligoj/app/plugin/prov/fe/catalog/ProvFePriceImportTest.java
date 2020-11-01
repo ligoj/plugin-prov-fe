@@ -52,8 +52,6 @@ import org.ligoj.app.plugin.prov.model.VmOs;
 import org.ligoj.app.plugin.prov.quote.instance.ProvQuoteInstanceResource;
 import org.ligoj.app.plugin.prov.quote.instance.QuoteInstanceEditionVo;
 import org.ligoj.app.plugin.prov.quote.storage.ProvQuoteStorageResource;
-import org.ligoj.app.plugin.prov.quote.storage.QuoteStorageEditionVo;
-import org.ligoj.app.plugin.prov.quote.storage.QuoteStorageQuery;
 import org.ligoj.app.plugin.prov.quote.support.ProvQuoteSupportResource;
 import org.ligoj.bootstrap.resource.system.configuration.ConfigurationResource;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -190,7 +188,7 @@ class ProvFePriceImportTest extends AbstractServerTest {
 		final var quote = install();
 
 		// Check the whole quote
-		check(quote, 222.428d, 444.856d, 211.428d);
+		check(quote, 1238.27d, 2476.54d, 1238.27d);
 		checkImportStatus();
 
 		// Check the 3 years term
@@ -250,8 +248,8 @@ class ProvFePriceImportTest extends AbstractServerTest {
 
 	private void checkImportStatus() {
 		final var status = this.resource.getImportCatalogResource().getTask("service:prov:fe");
-		Assertions.assertEquals(5, status.getDone());
-		Assertions.assertEquals(5, status.getWorkload());
+		Assertions.assertEquals(4, status.getDone());
+		Assertions.assertEquals(4, status.getWorkload());
 		Assertions.assertEquals("install-support", status.getPhase());
 		Assertions.assertEquals(DEFAULT_USER, status.getAuthor());
 		Assertions.assertTrue(status.getNbInstancePrices().intValue() >= 100);
@@ -281,35 +279,31 @@ class ProvFePriceImportTest extends AbstractServerTest {
 			final double instanceCost) {
 		Assertions.assertEquals(minCost, quote.getCost().getMin(), DELTA);
 		Assertions.assertEquals(maxCost, quote.getCost().getMax(), DELTA);
-		checkStorage(quote.getStorages().get(0));
+		// TODO checkStorage(quote.getStorages().get(0));
 		return checkInstance(quote.getInstances().get(0), instanceCost);
 	}
 
 	private ProvQuoteInstance checkInstance(final ProvQuoteInstance instance, final double cost) {
 		Assertions.assertEquals(cost, instance.getCost(), DELTA);
 		final var price = instance.getPrice();
-		Assertions.assertEquals("eu-west-2/ri-1m/windows/tinav5.cxry.high/sql server web", price.getCode());
+		Assertions.assertEquals("eu-west-0/ri-3y-flexible/p2.2xlarge.8/linux", price.getCode());
 		Assertions.assertEquals(0, price.getInitialCost());
-		Assertions.assertEquals(VmOs.WINDOWS, price.getOs());
+		Assertions.assertEquals(VmOs.LINUX, price.getOs());
 		Assertions.assertEquals(ProvTenancy.SHARED, price.getTenancy());
-		Assertions.assertEquals(51.835d, price.getCostCpu(), DELTA);
-		Assertions.assertEquals(4.088d, price.getCostRam(), DELTA);
-		Assertions.assertEquals(1, price.getPeriod());
-		Assertions.assertEquals(0, price.getCost());
-		Assertions.assertEquals(0, price.getCostPeriod()); // Dynamic instance type
-		Assertions.assertEquals(2d, price.getIncrementCpu());
-		Assertions.assertEquals(4d, price.getMinCpu());
-		Assertions.assertEquals("SQL SERVER WEB", price.getSoftware());
+		Assertions.assertEquals(36, price.getPeriod());
+		Assertions.assertEquals(1238.27d, price.getCost());
+		Assertions.assertEquals(44577.72d, price.getCostPeriod());
+		Assertions.assertNull(price.getSoftware());
 		final var term = price.getTerm();
-		Assertions.assertEquals("ri-1m", term.getCode());
-		Assertions.assertEquals("RI - 1 M", term.getName());
+		Assertions.assertEquals("ri-3y-flexible", term.getCode());
+		Assertions.assertEquals("Reserved, 3yr, flexible", term.getName());
 		Assertions.assertFalse(term.isEphemeral());
-		Assertions.assertEquals(1, term.getPeriod());
-		Assertions.assertEquals("tinav5.cxry.high", price.getType().getCode());
-		Assertions.assertEquals("tinav5.cXrY.high", price.getType().getName());
-		Assertions.assertEquals("vCore v5 - high", price.getType().getDescription());
-		Assertions.assertEquals("Intel Xeon Skylake", price.getType().getProcessor());
-		Assertions.assertFalse(price.getType().isAutoScale());
+		Assertions.assertEquals(36, term.getPeriod());
+		Assertions.assertEquals("p2.2xlarge.8", price.getType().getCode());
+		Assertions.assertEquals("p2.2xlarge.8", price.getType().getName());
+		Assertions.assertNull(price.getType().getDescription());
+		Assertions.assertEquals("Intel Xeon", price.getType().getProcessor());
+		Assertions.assertTrue(price.getType().isAutoScale());
 		return instance;
 	}
 
@@ -347,7 +341,7 @@ class ProvFePriceImportTest extends AbstractServerTest {
 		configuration.delete(FePriceImport.CONF_API_PRICES);
 		configuration.put(FePriceImport.CONF_ITYPE, "(t2|g1|p2).*");
 		configuration.put(FePriceImport.CONF_OS, "(WINDOWS|LINUX)");
-		configuration.put(FePriceImport.CONF_REGIONS, "(Paris|Atlanta)");
+		configuration.put(FePriceImport.CONF_REGIONS, "(eu-west-0|na-east-0)");
 		installAndConfigure(true);
 	}
 
@@ -359,55 +353,33 @@ class ProvFePriceImportTest extends AbstractServerTest {
 		em.flush();
 		em.clear();
 		Assertions.assertEquals(0, provResource.getConfiguration(subscription).getCost().getMin(), DELTA);
+		// em.createQuery("FROM ProvInstancePriceTerm").getResultList();
+		// em.createQuery("FROM ProvLocation").getResultList();
 
 		// Request an instance for a specific OS
-		// em.createQuery("FROM ProvInstancePriceTerm").getResultList();
-		
 		var lookup = qiResource.lookup(subscription,
-				builder().cpu(8).ram(12000).os(VmOs.LINUX).location("Paris").usage("36month").build());
+				builder().cpu(8).ram(12000).os(VmOs.LINUX).location("eu-west-0").usage("36month").build());
 		if (online) {
-			Assertions.assertEquals("paris/ri-3y/p2.2xlarge.8/linux", lookup.getPrice().getCode());
+			Assertions.assertEquals("eu-west-0/ri-3y/p2.2xlarge.8/linux", lookup.getPrice().getCode());
 		} else {
-			Assertions.assertEquals("paris/ri-3y/p2.2xlarge.8/linux", lookup.getPrice().getCode());
+			Assertions.assertEquals("eu-west-0/ri-3y/p2.2xlarge.8/linux", lookup.getPrice().getCode());
 		}
 		Assertions.assertTrue(lookup.getPrice().getType().getConstant());
-		
+
 		// Request convertible
 		lookup = qiResource.lookup(subscription,
-				builder().cpu(8).ram(12000).os(VmOs.LINUX).location("Paris").usage("36month-convertible").build());
+				builder().cpu(8).ram(12000).os(VmOs.LINUX).location("eu-west-0").usage("36month-convertible").build());
 		if (online) {
-			Assertions.assertEquals("paris/ri-3y-flexible/p2.2xlarge.8/linux", lookup.getPrice().getCode());
+			Assertions.assertEquals("eu-west-0/ri-3y-flexible/p2.2xlarge.8/linux", lookup.getPrice().getCode());
 		} else {
-			Assertions.assertEquals("paris/ri-3y-flexible/p2.2xlarge.8/linux", lookup.getPrice().getCode());
+			Assertions.assertEquals("eu-west-0/ri-3y-flexible/p2.2xlarge.8/linux", lookup.getPrice().getCode());
 		}
 
-		/*
-		// Request a SQL Server
-		lookup = qiResource.lookup(subscription, builder().constant(true).cpu(3).type("tinav5.cxry.high")
-				.software("SQL Server Web").os(VmOs.WINDOWS).build());
-		assertLookup("eu-west-2/ri-1m/windows/tinav5.cxry.high/sql server web", lookup, 211.428);
-		Assertions.assertFalse(lookup.getPrice().getType().isAutoScale());
-		Assertions.assertEquals(Rate.GOOD, lookup.getPrice().getType().getCpuRate());
-		Assertions.assertTrue(lookup.getPrice().getType().getConstant());
-
-		// Same but only 1 CPU -> 4 since min 4vCPU for SQL Server Web
-		lookup = qiResource.lookup(subscription, builder().constant(true).cpu(1).type("tinav5.cxry.high")
-				.software("SQL Server Web").os(VmOs.WINDOWS).build());
-		assertLookup("eu-west-2/ri-1m/windows/tinav5.cxry.high/sql server web", lookup, 211.428);
-
-		// 5 vCPU = 6vCPU for SQL Server Web
-		lookup = qiResource.lookup(subscription, builder().constant(true).cpu(5).type("tinav5.cxry.high")
-				.software("SQL Server Web").os(VmOs.WINDOWS).build());
-		assertLookup("eu-west-2/ri-1m/windows/tinav5.cxry.high/sql server web", lookup, 315.098);
-		lookup = qiResource.lookup(subscription, builder().constant(true).cpu(6).type("tinav5.cxry.high")
-				.software("SQL Server Web").os(VmOs.WINDOWS).build());
-		assertLookup("eu-west-2/ri-1m/windows/tinav5.cxry.high/sql server web", lookup, 315.098);
-
-		// New instance WINDOWS with SQL Server
+		// New instance LINUX
 		var ivo = new QuoteInstanceEditionVo();
-		ivo.setCpu(1d);
-		ivo.setRam(1);
-		ivo.setLocation("eu-west-2");
+		ivo.setCpu(8d);
+		ivo.setRam(12000);
+		ivo.setLocation("eu-west-0");
 		ivo.setPrice(lookup.getPrice().getId());
 		ivo.setName("server1");
 		ivo.setMaxQuantity(2);
@@ -416,43 +388,6 @@ class ProvFePriceImportTest extends AbstractServerTest {
 		Assertions.assertTrue(createInstance.getTotal().getMin() > 1);
 		Assertions.assertTrue(createInstance.getId() > 0);
 
-		qsResource.lookup(subscription, QuoteStorageQuery.builder().size(5).location("eu-west-2").build());
-		// Lookup block storage (volume) within a region different from the one of attached server -> no match
-		// ---------------------------------
-		Assertions.assertEquals(0, qsResource.lookup(subscription,
-				QuoteStorageQuery.builder().size(5).location("us-west-1").instance(createInstance.getId()).build())
-				.size());
-
-		// Lookup magnetic
-		// ---------------------------------
-		var sLookup = qsResource
-				.lookup(subscription, QuoteStorageQuery.builder().size(5).instance(createInstance.getId()).build())
-				.get(0);
-		Assertions.assertEquals("eu-west-2/bsu-standard", sLookup.getPrice().getCode());
-
-		// Lookup SSD
-		sLookup = qsResource.lookup(subscription, QuoteStorageQuery.builder().size(5)
-				.optimized(ProvStorageOptimized.IOPS).instance(createInstance.getId()).build()).get(0);
-		assertLookup("eu-west-2/bsu-gp2", sLookup, 0.55d);
-		Assertions.assertEquals("EUROPE", sLookup.getPrice().getLocation().getDescription());
-
-		// New storage attached to the created instance
-		var svo = new QuoteStorageEditionVo();
-		svo.setSize(100);
-		svo.setName("storage1");
-		svo.setSubscription(subscription);
-		svo.setInstance(createInstance.getId());
-		svo.setType(sLookup.getPrice().getType().getCode());
-		var createStorage = qsResource.create(svo);
-		Assertions.assertTrue(createStorage.getTotal().getMin() > 1);
-		Assertions.assertTrue(createStorage.getId() > 0);
-
-		// Lookup snapshot
-		// ---------------------------------
-		sLookup = qsResource.lookup(subscription, QuoteStorageQuery.builder().size(5).latency(Rate.LOW)
-				.optimized(ProvStorageOptimized.DURABILITY).build()).get(0);
-		assertLookup("eu-west-2/osu-enterprise", sLookup, 0.125d);
-*/
 		em.flush();
 		em.clear();
 		return provResource.getConfiguration(subscription);

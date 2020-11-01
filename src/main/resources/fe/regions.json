@@ -28,5 +28,15 @@
         "subRegion": "Atlanta",
         "latitude": 33.75570800000001,
         "longitude": -84.388368
+    },
+    "as-south-0": {
+	    "name": "Southeast Asia",
+	    "continentM49": 142,
+	    "regionM49": 30,
+	    "countryM49": 702,
+	    "countryA2": "SG",
+	    "subRegion": "Singapore",
+	    "latitude": 1.283,
+	    "longitude": 103.833
     }
 }
