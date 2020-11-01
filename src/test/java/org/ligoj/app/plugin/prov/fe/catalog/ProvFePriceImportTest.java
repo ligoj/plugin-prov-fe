@@ -128,6 +128,14 @@ class ProvFePriceImportTest extends AbstractServerTest {
 		usage36.setConfiguration(repository.findBy("subscription.id", subscription));
 		em.persist(usage36);
 
+		final var usage36Convertible = new ProvUsage();
+		usage36Convertible.setName("36month-convertible");
+		usage36Convertible.setRate(100);
+		usage36Convertible.setDuration(36);
+		usage36Convertible.setConvertibleFamily(true);
+		usage36Convertible.setConfiguration(repository.findBy("subscription.id", subscription));
+		em.persist(usage36Convertible);
+
 		final var usageDev = new ProvUsage();
 		usageDev.setName("dev");
 		usageDev.setRate(30);
@@ -353,23 +361,27 @@ class ProvFePriceImportTest extends AbstractServerTest {
 		Assertions.assertEquals(0, provResource.getConfiguration(subscription).getCost().getMin(), DELTA);
 
 		// Request an instance for a specific OS
+		// em.createQuery("FROM ProvInstancePriceTerm").getResultList();
+		
 		var lookup = qiResource.lookup(subscription,
-				builder().cpu(8).ram(256000).os(VmOs.LINUX).location("eu-west-2").usage("36month").build());
+				builder().cpu(8).ram(12000).os(VmOs.LINUX).location("Paris").usage("36month").build());
 		if (online) {
-			Assertions.assertEquals("eu-west-2/ri-3y/linux/tinav5.cxry.medium", lookup.getPrice().getCode());
+			Assertions.assertEquals("paris/ri-3y/p2.2xlarge.8/linux", lookup.getPrice().getCode());
 		} else {
-			Assertions.assertEquals("eu-west-2/ri-3y/linux/tinav1.cxry.medium", lookup.getPrice().getCode());
+			Assertions.assertEquals("paris/ri-3y/p2.2xlarge.8/linux", lookup.getPrice().getCode());
 		}
-		Assertions.assertFalse(lookup.getPrice().getType().getConstant());
-
-		// Request a dedicated instance for a generic Linux OS
-		lookup = qiResource.lookup(subscription, builder().constant(true).type("tinav5.cxry.high").os(VmOs.LINUX)
-				.tenancy(ProvTenancy.DEDICATED).build());
-		Assertions.assertEquals("eu-west-2/ri-1m/linux/tinav5.cxry.high/dedicated", lookup.getPrice().getCode());
-		Assertions.assertFalse(lookup.getPrice().getType().isAutoScale());
-		Assertions.assertEquals(Rate.GOOD, lookup.getPrice().getType().getCpuRate());
 		Assertions.assertTrue(lookup.getPrice().getType().getConstant());
+		
+		// Request convertible
+		lookup = qiResource.lookup(subscription,
+				builder().cpu(8).ram(12000).os(VmOs.LINUX).location("Paris").usage("36month-convertible").build());
+		if (online) {
+			Assertions.assertEquals("paris/ri-3y-flexible/p2.2xlarge.8/linux", lookup.getPrice().getCode());
+		} else {
+			Assertions.assertEquals("paris/ri-3y-flexible/p2.2xlarge.8/linux", lookup.getPrice().getCode());
+		}
 
+		/*
 		// Request a SQL Server
 		lookup = qiResource.lookup(subscription, builder().constant(true).cpu(3).type("tinav5.cxry.high")
 				.software("SQL Server Web").os(VmOs.WINDOWS).build());
@@ -440,7 +452,7 @@ class ProvFePriceImportTest extends AbstractServerTest {
 		sLookup = qsResource.lookup(subscription, QuoteStorageQuery.builder().size(5).latency(Rate.LOW)
 				.optimized(ProvStorageOptimized.DURABILITY).build()).get(0);
 		assertLookup("eu-west-2/osu-enterprise", sLookup, 0.125d);
-
+*/
 		em.flush();
 		em.clear();
 		return provResource.getConfiguration(subscription);

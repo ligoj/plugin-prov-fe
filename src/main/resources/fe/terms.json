@@ -31,24 +31,24 @@
     	"name": "Reserved, 3yr, Partial Upfront",
         "period": 36
     },
-    "ri-1y-convertible": {
-    	"name": "Reserved, 1yr, convertible",
+    "ri-1y-flexible": {
+    	"name": "Reserved, 1yr, flexible",
         "period": 12
     },
-    "ri-1y-upfront-convertible": {
-    	"name": "Reserved, 1yr, Partial Upfront, convertible",
+    "ri-1y-upfront-flexible": {
+    	"name": "Reserved, 1yr, Partial Upfront, flexible",
         "period": 12
     },
-    "ri-2y-upfront-convertible": {
-   		"name": "Reserved, 2yr, Partial Upfront, convertible",
+    "ri-2y-upfront-flexible": {
+   		"name": "Reserved, 2yr, Partial Upfront, flexible",
         "period": 24
     },
-    "ri-3y-convertible": {
-    	"name": "Reserved, 3yr, convertible",
+    "ri-3y-flexible": {
+    	"name": "Reserved, 3yr, flexible",
         "period": 36
     },
-    "ri-3y-upfront-convertible": {
-    	"name": "Reserved, 3yr, Partial Upfront, convertible",
+    "ri-3y-upfront-flexible": {
+    	"name": "Reserved, 3yr, Partial Upfront, flexible",
         "period": 36
     }
 }

@@ -70,6 +70,11 @@ public class FePriceImport extends AbstractImportCatalogResource {
 	private static final String NO_SOFTWARE = "DEF";
 
 	/**
+	 * Orange FE term option AKA "convertible" for AWS.
+	 */
+	private static final String FLEXIBLE_TERM = "flexible";
+
+	/**
 	 * Configuration key used for URL prices.
 	 */
 	protected static final String CONF_API_PRICES = ProvFePluginResource.KEY + ":prices-url";
@@ -332,24 +337,21 @@ public class FePriceImport extends AbstractImportCatalogResource {
 
 		if (price.isConvertible()) {
 			// Convertible mode
-			installInstancePrice(context, location, "ri-1y-convertible", type, 1, price.getCost1yPerMonth(), 0d);
-			installInstancePrice(context, location, "ri-1y-upfront-convertible", type, 1, price.getCost1yUFPerMonth(),
-					price.getCost1yUFFee());
-			installInstancePrice(context, location, "ri-2y-upfront-convertible", type, 1, price.getCost2yUFPerMonth(),
-					price.getCost2yUFFee());
-			installInstancePrice(context, location, "ri-3y-convertible", type, 1, price.getCost3yPerMonth(), 0d);
-			installInstancePrice(context, location, "ri-3y-upfront-convertible", type, 1, price.getCost3yUFPerMonth(),
-					price.getCost3yUFFee());
+			installInstancePrice(context, location, "ri-1y-" + FLEXIBLE_TERM, type, 1, price.getCost1yPerMonth(), 0d);
+			installInstancePrice(context, location, "ri-1y-upfront-" + FLEXIBLE_TERM, type, 1,
+					price.getCost1yUFPerMonth(), price.getCost1yUFFee());
+			installInstancePrice(context, location, "ri-2y-upfront-" + FLEXIBLE_TERM, type, 1,
+					price.getCost2yUFPerMonth(), price.getCost2yUFFee());
+			installInstancePrice(context, location, "ri-3y-" + FLEXIBLE_TERM, type, 1, price.getCost3yPerMonth(), 0d);
+			installInstancePrice(context, location, "ri-3y-upfront-" + FLEXIBLE_TERM, type, 1,
+					price.getCost3yUFPerMonth(), price.getCost3yUFFee());
 		} else {
 			// Standard, non convertible price entry
 			installInstancePrice(context, location, "on-demand", type, context.getHoursMonth(), price.getCost1h(), 0d);
 			installInstancePrice(context, location, "on-demand-1m", type, 1, price.getCost1m(), 0d);
-			installInstancePrice(context, location, "ri-1y", type, context.getHoursMonth(), price.getCost1yPerMonth(),
-					0d);
-			installInstancePrice(context, location, "ri-3y", type, context.getHoursMonth(), price.getCost3yPerMonth(),
-					0d);
-			installInstancePrice(context, location, "ri-5y", type, context.getHoursMonth(), price.getCost5yPerMonth(),
-					0d);
+			installInstancePrice(context, location, "ri-1y", type, 1, price.getCost1yPerMonth(), 0d);
+			installInstancePrice(context, location, "ri-3y", type, 1, price.getCost3yPerMonth(), 0d);
+			installInstancePrice(context, location, "ri-5y", type, 1, price.getCost5yPerMonth(), 0d);
 			installInstancePrice(context, location, "ri-1y-upfront", type, context.getHoursMonth(),
 					price.getCost1yUFPerMonth(), price.getCost1yUFPerMonth());
 			installInstancePrice(context, location, "ri-2y-upfront", type, context.getHoursMonth(), price.getCost1h(),
@@ -358,22 +360,22 @@ public class FePriceImport extends AbstractImportCatalogResource {
 					price.getCost3yUFPerMonth());
 		}
 
-		// Handle extra CSV column for convertible 3y
+		// Handle extra CSV column for convertible (flexible) 3y
 		if (price.getCost3yPerMonthConvertible() != null) {
-			installInstancePrice(context, location, "ri-3y-convertible", type, 1, price.getCost3yPerMonthConvertible(),
-					0d);
+			installInstancePrice(context, location, "ri-3y-" + FLEXIBLE_TERM, type, 1,
+					price.getCost3yPerMonthConvertible(), 0d);
 		}
 	}
 
 	private void installInstancePrice(final UpdateContext context, final ProvLocation region, final String termCode,
-			final ProvInstanceType type, final double coeff, final Double monthlyCostNoCoeff,
+			final ProvInstanceType type, final double monthlyCoeff, final Double monthlyCostNoCoeff,
 			final Double initialCost) {
 
 		if (monthlyCostNoCoeff == null) {
 			// Ignore this null price (not 0)
 			return;
 		}
-		final var monthlyCost = coeff * monthlyCostNoCoeff;
+		final var monthlyCost = monthlyCoeff * monthlyCostNoCoeff;
 		final var term = installPriceTerm(context, context.getCsvTerms().get(termCode));
 
 		// Get the OS/Software price from : location , type, OS, software
@@ -414,8 +416,8 @@ public class FePriceImport extends AbstractImportCatalogResource {
 			final Double monthlyCost, final Double initialCost) {
 		// Build the code string
 
-		final var price = context.getPrevious()
-				.computeIfAbsent(String.join(region.getName(), type.getCode(), os.name()).toLowerCase(), code -> {
+		final var price = context.getPrevious().computeIfAbsent(
+				String.join("/", region.getName(), term.getCode(), type.getCode(), os.name()).toLowerCase(), code -> {
 					// New instance price (not update mode)
 					final var newPrice = new ProvInstancePrice();
 					newPrice.setCode(code);
@@ -466,7 +468,7 @@ public class FePriceImport extends AbstractImportCatalogResource {
 			final var instanceFamily = StringUtils.split(code, ".")[0];
 			t.setName(code);
 			t.setCpu(price.getCpu());
-			t.setRam(price.getRam());
+			t.setRam(price.getRam() * 1024);
 			t.setConstant(!instanceFamily.startsWith("t"));
 			t.setAutoScale(true);
 
@@ -521,8 +523,8 @@ public class FePriceImport extends AbstractImportCatalogResource {
 			t.setName(jsonTerm.getName());
 			t.setPeriod(jsonTerm.getPeriod());
 			t.setReservation(false);
-			t.setConvertibleFamily(code.contains("convertible"));
-			t.setConvertibleType(code.contains("convertible"));
+			t.setConvertibleFamily(code.contains(FLEXIBLE_TERM));
+			t.setConvertibleType(code.contains(FLEXIBLE_TERM));
 			t.setConvertibleLocation(false);
 			t.setConvertibleOs(true);
 			t.setEphemeral(false);
