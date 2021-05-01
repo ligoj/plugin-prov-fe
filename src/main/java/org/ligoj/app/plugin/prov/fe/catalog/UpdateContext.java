@@ -3,7 +3,6 @@
  */
 package org.ligoj.app.plugin.prov.fe.catalog;
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -31,7 +30,7 @@ public class UpdateContext extends AbstractUpdateContext {
 	 * Cost RAM.
 	 */
 	private CsvPrice costRam;
-	
+
 	/**
 	 * Dedicated tenancy cost.
 	 */
@@ -42,6 +41,6 @@ public class UpdateContext extends AbstractUpdateContext {
 	 */
 	private Map<String, Map<String, List<CsvPrice>>> csvPrices;
 
-	private Map<String, Map<String,Map<VmOs, Map<String,CsvOsPrice>>>> osPrices;
+	private Map<String, Map<String, Map<VmOs, Map<String, CsvOsPrice>>>> osPrices;
 
 }

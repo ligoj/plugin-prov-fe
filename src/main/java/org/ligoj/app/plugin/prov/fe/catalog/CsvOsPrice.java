@@ -25,15 +25,14 @@ public class CsvOsPrice extends DescribedBean<String> {
 	@Getter
 	@Setter
 	private VmOs os;
-	
-	
+
 	/**
 	 * Extracted location code name.
 	 */
 	@Getter
 	@Setter
 	private String location;
-	
+
 	/**
 	 * Extracted instance type code name.
 	 */
@@ -45,7 +44,6 @@ public class CsvOsPrice extends DescribedBean<String> {
 	@Setter
 	private String software;
 
-
 	@Getter
 	@Setter
 	private Double cost1h;
@@ -53,7 +51,6 @@ public class CsvOsPrice extends DescribedBean<String> {
 	@Getter
 	@Setter
 	private Double cost1m;
-
 
 	/**
 	 * Ignored property

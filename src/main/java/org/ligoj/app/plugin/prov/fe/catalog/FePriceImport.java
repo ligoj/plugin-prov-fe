@@ -47,9 +47,9 @@ import lombok.extern.slf4j.Slf4j;
  * The provisioning price service for Digital Ocean. Manage install or update of prices.<br>
  * Note about RI: Subscribing to a Reserved Instance is a pricing option and does not guarantee resource availability.
  * If your target flavor is not already in use, it is recommended to check the availability on the Console.
- * 
- * 
- * 
+ *
+ *
+ *
  * @see <a href=
  *      "https://cloud.orange-business.com/offres/infrastructure-iaas/flexible-engine/assistance-flexible-engine/comprendre-sa-facture">VM
  *      Billing</a>
@@ -57,18 +57,18 @@ import lombok.extern.slf4j.Slf4j;
  *      "https://cloud.orange-business.com/wp-content/uploads/2020/06/Quote-Flexible-Engine-External.xlsx">Pricing
  *      sheet</a>
  * @see <a href="https://cloud.orange-business.com/nos-tarifs/elastic-cloud-server/">Pricing</a>
- * 
+ *
  * @see <a href=
  *      "https://cloud.orange-business.com/offres/infrastructure-iaas/flexible-engine/fonctionnalites/elastic-cloud-server/">Instance
  *      types</a>
- * 
+ *
  * @see <a href=
  *      "https://cloud.orange-business.com/wp-content/uploads/2019/03/Flexible-Engine-Service-Description_280619.pdf">Service
  *      Description</a>
  * @see <a href=
  *      "https://cloud.orange-business.com/wp-content/uploads/2019/11/flexible_engine-service_description.pdf">Service
  *      Description (new)</a>
- * 
+ *
  */
 @Component
 @Setter
@@ -136,7 +136,7 @@ public class FePriceImport extends AbstractImportCatalogResource {
 	 * @throws IOException When CSV or XML files cannot be read.
 	 */
 	public void install(final boolean force) throws IOException, URISyntaxException {
-		final UpdateContext context = initContext(new UpdateContext(), ProvFePluginResource.KEY, force);
+		final var context = initContext(new UpdateContext(), ProvFePluginResource.KEY, force);
 		final var node = context.getNode();
 
 		// Get previous data
@@ -402,7 +402,7 @@ public class FePriceImport extends AbstractImportCatalogResource {
 		final var localOsPrices = context.getOsPrices().getOrDefault(region.getName(), Collections.emptyMap())
 				.getOrDefault(type.getCode(), Collections.emptyMap());
 		localOsPrices.entrySet().forEach(localOsPrice -> {
-			final VmOs os = localOsPrice.getKey();
+			final var os = localOsPrice.getKey();
 			localOsPrice.getValue().entrySet().forEach(csvEntry -> {
 				final String software;
 				if (csvEntry.getKey().equals(NO_SOFTWARE)) {
@@ -554,7 +554,7 @@ public class FePriceImport extends AbstractImportCatalogResource {
 	public void installSupportPrice(final UpdateContext context, final String code, final ProvSupportPrice aPrice) {
 		final var price = context.getPreviousSupport().computeIfAbsent(code, c -> {
 			// New instance price
-			final ProvSupportPrice newPrice = new ProvSupportPrice();
+			final var newPrice = new ProvSupportPrice();
 			newPrice.setCode(c);
 			return newPrice;
 		});

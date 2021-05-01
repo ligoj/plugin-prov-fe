@@ -75,7 +75,7 @@ class ProvFePluginResourceTest extends AbstractServerTest {
 
 	@Test
 	void install() throws Exception {
-		final ProvFePluginResource resource2 = new ProvFePluginResource();
+		final var resource2 = new ProvFePluginResource();
 		resource2.priceImport = Mockito.mock(FePriceImport.class);
 		resource2.install();
 	}
