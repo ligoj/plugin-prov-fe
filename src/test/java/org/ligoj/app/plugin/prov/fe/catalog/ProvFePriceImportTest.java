@@ -51,7 +51,6 @@ import org.ligoj.app.plugin.prov.model.SupportType;
 import org.ligoj.app.plugin.prov.model.VmOs;
 import org.ligoj.app.plugin.prov.quote.instance.ProvQuoteInstanceResource;
 import org.ligoj.app.plugin.prov.quote.instance.QuoteInstanceEditionVo;
-import org.ligoj.app.plugin.prov.quote.storage.ProvQuoteStorageResource;
 import org.ligoj.app.plugin.prov.quote.support.ProvQuoteSupportResource;
 import org.ligoj.bootstrap.resource.system.configuration.ConfigurationResource;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -78,9 +77,6 @@ class ProvFePriceImportTest extends AbstractServerTest {
 
 	@Autowired
 	private ProvQuoteInstanceResource qiResource;
-
-	@Autowired
-	private ProvQuoteStorageResource qsResource;
 
 	@Autowired
 	private ProvQuoteSupportResource qs2Resource;
