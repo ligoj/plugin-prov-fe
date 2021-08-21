@@ -144,7 +144,7 @@ public class FePriceImport extends AbstractImportCatalogResource {
 		context.setValidOs(Pattern.compile(configuration.get(CONF_OS, ".*"), Pattern.CASE_INSENSITIVE));
 		context.setValidInstanceType(Pattern.compile(configuration.get(CONF_ITYPE, ".*"), Pattern.CASE_INSENSITIVE));
 		context.setValidRegion(Pattern.compile(configuration.get(CONF_REGIONS, ".*")));
-		context.getMapRegionToName().putAll(toMap("fe/regions.json", MAP_LOCATION));
+		context.getMapRegionById().putAll(toMap("fe/regions.json", MAP_LOCATION));
 		context.setInstanceTypes(itRepository.findAllBy(BY_NODE, node).stream()
 				.collect(Collectors.toMap(ProvInstanceType::getCode, Function.identity())));
 		context.setPriceTerms(iptRepository.findAllBy(BY_NODE, node).stream()
@@ -173,7 +173,7 @@ public class FePriceImport extends AbstractImportCatalogResource {
 		context.setCsvTerms(terms);
 
 		// Complete location description from "subRegion"
-		context.getMapRegionToName().values().forEach(r -> r.setDescription(r.getSubRegion()));
+		context.getMapRegionById().values().forEach(r -> r.setDescription(r.getSubRegion()));
 
 		// Fetch the remote prices stream and build the price objects
 		// Instances
@@ -325,7 +325,7 @@ public class FePriceImport extends AbstractImportCatalogResource {
 	 * Return the location from its human readable name like <code>eu-west-0</code/>.
 	 */
 	private String getLocationFromName(final UpdateContext context, final String humanName) {
-		return context.getMapRegionToName().entrySet().stream()
+		return context.getMapRegionById().entrySet().stream()
 				.filter(r -> humanName.equalsIgnoreCase(r.getValue().getSubRegion())).map(r -> r.getKey()).findFirst()
 				.orElse(humanName);
 	}
@@ -456,7 +456,6 @@ public class FePriceImport extends AbstractImportCatalogResource {
 		});
 
 		// Update the cost
-		context.getPrices().add(price.getCode());
 		saveAsNeeded(context, price, price.getCost(), monthlyCost, (cR, c) -> {
 			price.setInitialCost(initialCost);
 			price.setCost(cR);

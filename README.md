@@ -1,6 +1,6 @@
 # :link: Ligoj Orange Flexible Engine plugin [![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.ligoj.plugin/plugin-fe/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.ligoj.plugin/plugin-fe)
 
-[![Build Status](https://travis-ci.org/ligoj/plugin-fe.svg?branch=master)](https://travis-ci.org/ligoj/plugin-fe)
+[![Build Status](https://travis-ci.com/ligoj/plugin-fe.svg?branch=master)](https://travis-ci.com/ligoj/plugin-fe)
 [![Build Status](https://circleci.com/gh/ligoj/plugin-fe.svg?style=svg)](https://circleci.com/gh/ligoj/plugin-fe)
 [![Build Status](https://ci.appveyor.com/api/projects/status/ab9k0b2nt31kk705?svg=true)](https://ci.appveyor.com/project/ligoj/plugin-fe/branch/master)
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=org.ligoj.plugin%3Aplugin-fe&metric=coverage)](https://sonarcloud.io/dashboard?id=org.ligoj.plugin%3Aplugin-fe)
