@@ -112,7 +112,14 @@ public class CsvOsForBeanFe extends AbstractCsvManager {
 				return false;
 			}
 		}
-		return rawValues.size() >= 7 && !rawValues.get(0).isBlank();
+		if (rawValues.size() < 7 || rawValues.get(0).isBlank()) {
+			return false;
+		}
+		
+		// Sanitize amounts
+		rawValues.set(5,rawValues.get(5).replaceAll("[^\\d,]", ""));
+		rawValues.set(6,rawValues.get(6).replaceAll("[^\\d,]", ""));
+		return true;
 	}
 
 	/**

@@ -96,7 +96,14 @@ public class CsvForBeanFe extends AbstractCsvManager {
 				return false;
 			}
 		}
-		return rawValues.size() >= 19 && NumberUtils.isDigits(rawValues.get(1));
+		if (rawValues.size() < 19 || !NumberUtils.isDigits(rawValues.get(1))) {
+			return false;
+		}
+
+		// Sanitize amounts
+		rawValues.set(1, rawValues.get(1).replaceAll("[^\\d,]", ""));
+		rawValues.set(2, rawValues.get(2).replaceAll("[^\\d,]", ""));
+		return true;
 	}
 
 	/**
