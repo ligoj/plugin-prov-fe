@@ -9,6 +9,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
+import org.apache.commons.lang3.StringUtils;
 import org.ligoj.app.plugin.prov.AbstractProvResource;
 import org.ligoj.app.plugin.prov.ProvResource;
 import org.ligoj.app.plugin.prov.catalog.ImportCatalogService;
@@ -81,5 +82,10 @@ public class ProvFePluginResource extends AbstractProvResource implements Import
 	@Override
 	public void create(final int subscription) {
 		// Authenticate only for the check
+	}
+
+	@Override
+	public String getName() {
+		return "Flexible Engine";
 	}
 }

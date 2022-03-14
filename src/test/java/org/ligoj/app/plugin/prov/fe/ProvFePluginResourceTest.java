@@ -74,6 +74,11 @@ class ProvFePluginResourceTest extends AbstractServerTest {
 	}
 
 	@Test
+	void getName() {
+		Assertions.assertEquals("Flexible Engine", resource.getName());
+	}
+
+	@Test
 	void install() throws Exception {
 		final var resource2 = new ProvFePluginResource();
 		resource2.priceImport = Mockito.mock(FePriceImport.class);
