@@ -321,7 +321,7 @@ class ProvFePriceImportTest extends AbstractServerTest {
 	}
 
 	/**
-	 * Common offline install and configuring an instance
+	 * Common offline inystall and configuring an instance
 	 *
 	 * @return The new quote from the installed
 	 */
