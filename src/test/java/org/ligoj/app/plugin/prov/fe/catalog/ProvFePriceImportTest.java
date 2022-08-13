@@ -189,7 +189,7 @@ class ProvFePriceImportTest extends AbstractServerTest {
 
 		// Check the 3 years term
 		var lookup = qiResource.lookup(subscription,
-				builder().cpu(7).ram(1741).constant(true).usage("36month").build());
+				builder().cpu(7).ram(1741).workload("100").usage("36month").build());
 		assertLookup("eu-west-2/ri-3y/linux/tinav1.cxry.high", lookup, 29.2);
 		Assertions.assertEquals(0, lookup.getPrice().getCost()); // Dynamic, per vCpu price
 		Assertions.assertEquals(0, lookup.getPrice().getCostPeriod()); // Dynamic
@@ -233,7 +233,7 @@ class ProvFePriceImportTest extends AbstractServerTest {
 		checkImportStatus();
 
 		// Check the new prices
-		lookup = qiResource.lookup(subscription, builder().cpu(7).ram(1741).constant(true).usage("36month").build());
+		lookup = qiResource.lookup(subscription, builder().cpu(7).ram(1741).workload("100").usage("36month").build());
 		assertLookup("eu-west-2/ri-3y/linux/tinav1.cxry.high", lookup, 30.514);
 		lookup = qiResource.lookup(subscription,
 				builder().cpu(3).ram(8000).os(VmOs.WINDOWS).software("sql server web").build());
@@ -360,7 +360,7 @@ class ProvFePriceImportTest extends AbstractServerTest {
 		} else {
 			Assertions.assertEquals("eu-west-0/ri-3y/p2.2xlarge.8/linux", lookup.getPrice().getCode());
 		}
-		Assertions.assertTrue(lookup.getPrice().getType().getConstant());
+		Assertions.assertEquals(100d, lookup.getPrice().getType().getBaseline());
 
 		// Request convertible
 		lookup = qiResource.lookup(subscription,

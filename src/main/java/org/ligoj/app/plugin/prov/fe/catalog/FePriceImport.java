@@ -488,7 +488,7 @@ public class FePriceImport extends AbstractImportCatalogResource {
 			t.setName(code);
 			t.setCpu(price.getCpu());
 			t.setRam(price.getRam() * 1024);
-			t.setConstant(!instanceFamily.startsWith("t"));
+			t.setBaseline(instanceFamily.startsWith("t") ? 20d : 100d);
 			t.setAutoScale(true);
 
 			// See (out of date)
