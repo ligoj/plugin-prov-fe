@@ -6,7 +6,7 @@ package org.ligoj.app.plugin.prov.fe;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 
-import javax.transaction.Transactional;
+import jakarta.transaction.Transactional;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -60,7 +60,7 @@ class ProvFePluginResourceTest extends AbstractServerTest {
 				new Class[] { Node.class, Project.class, CacheCompany.class, CacheUser.class, DelegateNode.class,
 						Subscription.class, ProvLocation.class, ProvQuote.class, Parameter.class,
 						ParameterValue.class },
-				StandardCharsets.UTF_8.name());
+				StandardCharsets.UTF_8);
 		configuration.put("service:prov:fe:api", "http://localhost:" + MOCK_PORT + "/");
 		this.subscription = getSubscription("gStack");
 
@@ -99,13 +99,11 @@ class ProvFePluginResourceTest extends AbstractServerTest {
 		initSpringSecurityContext("any");
 
 		// Re-Install a new configuration
-		Assertions.assertEquals("read-only-node", Assertions.assertThrows(BusinessException.class, () -> {
-			resource.updateCatalog("service:prov:fe:test", false);
-		}).getMessage());
+		Assertions.assertEquals("read-only-node", Assertions.assertThrows(BusinessException.class, () -> resource.updateCatalog("service:prov:fe:test", false)).getMessage());
 	}
 
 	@Test
-	void create() throws Exception {
+	void create() {
 		resource.create(subscription);
 	}
 
@@ -117,7 +115,7 @@ class ProvFePluginResourceTest extends AbstractServerTest {
 	}
 
 	@Test
-	void checkStatus() throws Exception {
+	void checkStatus() {
 		Assertions.assertTrue(resource.checkStatus(subscriptionResource.getParametersNoCheck(subscription)));
 	}
 

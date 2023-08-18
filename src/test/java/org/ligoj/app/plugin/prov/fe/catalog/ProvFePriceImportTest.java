@@ -13,12 +13,12 @@ import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.nio.charset.StandardCharsets;
 
-import javax.annotation.PostConstruct;
-import javax.transaction.Transactional;
+import jakarta.annotation.PostConstruct;
+import jakarta.transaction.Transactional;
 
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.reflect.MethodUtils;
-import org.apache.http.HttpStatus;
+import org.apache.hc.core5.http.HttpStatus;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -96,7 +96,7 @@ class ProvFePriceImportTest extends AbstractServerTest {
 				new Class[] { Node.class, Project.class, CacheCompany.class, CacheUser.class, DelegateNode.class,
 						Parameter.class, ProvLocation.class, Subscription.class, ParameterValue.class,
 						ProvQuote.class },
-				StandardCharsets.UTF_8.name());
+				StandardCharsets.UTF_8);
 		this.subscription = getSubscription("gStack");
 
 		// Mock catalog import helper
@@ -166,7 +166,7 @@ class ProvFePriceImportTest extends AbstractServerTest {
 	}
 
 	@Test
-	void installOffLineKoPrices() throws Exception {
+	void installOffLineKoPrices() {
 		configuration.put(FePriceImport.CONF_API_PRICES, "http://localhost:" + MOCK_PORT);
 		httpServer.start();
 		Assertions.assertThrows(FileNotFoundException.class, () -> resource.install(false));
@@ -247,8 +247,8 @@ class ProvFePriceImportTest extends AbstractServerTest {
 		Assertions.assertEquals(4, status.getWorkload());
 		Assertions.assertEquals("install-support", status.getPhase());
 		Assertions.assertEquals(DEFAULT_USER, status.getAuthor());
-		Assertions.assertTrue(status.getNbPrices().intValue() >= 100);
-		Assertions.assertTrue(status.getNbTypes().intValue() >= 15);
+		Assertions.assertTrue(status.getNbPrices() >= 100);
+		Assertions.assertTrue(status.getNbTypes() >= 15);
 		Assertions.assertTrue(status.getNbLocations() >= 1);
 	}
 
@@ -256,16 +256,16 @@ class ProvFePriceImportTest extends AbstractServerTest {
 		configuration.put(FePriceImport.CONF_API_PRICES, "http://localhost:" + MOCK_PORT);
 		httpServer.stubFor(get(urlEqualTo("/prices/pricing-compute.csv"))
 				.willReturn(aResponse().withStatus(HttpStatus.SC_OK).withBody(IOUtils.toString(
-						new ClassPathResource("mock-server/fe/pricing-compute.csv").getInputStream(), "UTF-8"))));
+						new ClassPathResource("mock-server/fe/pricing-compute.csv").getInputStream(), StandardCharsets.UTF_8))));
 		httpServer.stubFor(get(urlEqualTo("/prices/pricing-os.csv"))
 				.willReturn(aResponse().withStatus(HttpStatus.SC_OK).withBody(IOUtils
-						.toString(new ClassPathResource("mock-server/fe/pricing-os.csv").getInputStream(), "UTF-8"))));
+						.toString(new ClassPathResource("mock-server/fe/pricing-os.csv").getInputStream(), StandardCharsets.UTF_8))));
 		httpServer.stubFor(get(urlEqualTo("/v2/prices/pricing-compute.csv"))
 				.willReturn(aResponse().withStatus(HttpStatus.SC_OK).withBody(IOUtils.toString(
-						new ClassPathResource("mock-server/fe/v2/pricing-compute.csv").getInputStream(), "UTF-8"))));
+						new ClassPathResource("mock-server/fe/v2/pricing-compute.csv").getInputStream(), StandardCharsets.UTF_8))));
 		httpServer.stubFor(get(urlEqualTo("/v2/prices/pricing-os.csv"))
 				.willReturn(aResponse().withStatus(HttpStatus.SC_OK).withBody(IOUtils.toString(
-						new ClassPathResource("mock-server/fe/v2/pricing-os.csv").getInputStream(), "UTF-8"))));
+						new ClassPathResource("mock-server/fe/v2/pricing-os.csv").getInputStream(), StandardCharsets.UTF_8))));
 		httpServer.start();
 	}
 
@@ -319,7 +319,7 @@ class ProvFePriceImportTest extends AbstractServerTest {
 	}
 
 	/**
-	 * Common offline inystall and configuring an instance
+	 * Common offline install and configuring an instance
 	 *
 	 * @return The new quote from the installed
 	 */
@@ -342,7 +342,7 @@ class ProvFePriceImportTest extends AbstractServerTest {
 	/**
 	 * Install and check
 	 */
-	private QuoteVo installAndConfigure(final boolean online) throws IOException, Exception {
+	private QuoteVo installAndConfigure(final boolean online) throws Exception {
 		resource.install(false);
 		em.flush();
 		em.clear();
